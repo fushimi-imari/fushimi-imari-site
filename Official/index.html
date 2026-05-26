@@ -581,6 +581,44 @@ a:hover { opacity: 0.7; }
 .cat-card-cta::after { content: '→'; transition: transform 0.3s; }
 .cat-card:hover .cat-card-cta::after { transform: translateX(4px); }
 
+/* cat-card-sub : 控えめなセカンダリ動線（BEAUTY → MEN'S EDIT 等） */
+.cat-card-sub {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(123, 45, 63, 0.12);
+}
+.cat-card-sub-link {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+  color: var(--color-brown);
+  transition: opacity 0.3s;
+}
+.cat-card-sub-link:hover { opacity: 0.72; }
+.cat-card-sub-thumb {
+  width: 40px; height: 40px;
+  border-radius: 2px;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: brightness(0.92);
+}
+.cat-card-sub-text {
+  display: flex; flex-direction: column; gap: 2px;
+  line-height: 1.3;
+}
+.cat-card-sub-label {
+  font-family: var(--font-en);
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  color: var(--color-bordeaux);
+  font-weight: 600;
+}
+.cat-card-sub-title {
+  font-family: var(--font-jp);
+  font-size: 12px;
+  color: var(--color-brown);
+  letter-spacing: 0.06em;
+}
+
 /* image themes — 静止画は background-image、動画は <video class="cat-card-video"> */
 .cat-card-image.fortune {
   background: #4A2842 url('images/cat_fortune_static.jpg') center/cover no-repeat;
@@ -1400,6 +1438,7 @@ footer {
     </div>
     <div class="hero-fans-note">
       <a href="https://lit.link/fushimi_imari_" target="_blank" rel="noopener">— 撮影会・ご予約はこちら ↗</a>
+      <a href="../Men/" style="display:block;margin-top:6px;">— 男性のあなたへ ／ MEN'S EDIT ↗</a>
     </div>
   </div>
 </section>
@@ -1422,6 +1461,15 @@ footer {
         <div class="cat-card-title">30代の美容EDIT</div>
         <div class="cat-card-desc">朝の鏡が 楽しみになる素肌へ<br>30代からの効いた一品ずつを集めた場所</div>
         <a href="../LP/index.html" class="cat-card-cta">理想の一本に 出会いに行く</a>
+        <div class="cat-card-sub">
+          <a href="../Men/" class="cat-card-sub-link">
+            <img src="images/men_card.jpg" alt="MEN'S EDIT" class="cat-card-sub-thumb" loading="lazy">
+            <div class="cat-card-sub-text">
+              <span class="cat-card-sub-label">MEN'S EDIT</span>
+              <span class="cat-card-sub-title">男性のあなたへ — 静かな贈り物</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
     <div class="cat-card">
