@@ -238,7 +238,7 @@
 
 ▶ **IMARI BEAUTY EDIT**
 ファッションと並んで、わたしのスキンケアもこちらに集めました。
-▶ https://[KAGA_REPLACE_VERCEL_URL]/LP/
+▶ https://fushimi-imari-site.vercel.app/LP/
 
 ---
 

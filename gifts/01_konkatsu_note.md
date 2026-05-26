@@ -100,7 +100,7 @@ Aさんは、Pairs エンゲージに切り替えた3ヶ月後、
 
 > 「次のステップに進みたい」と思った時、まず動くなら：
 > ▶ いまり恋愛鑑定室で、今の方位を読む（無料）
-> https://[KAGA_REPLACE_VERCEL_URL]/Fortune/
+> https://fushimi-imari-site.vercel.app/Fortune/
 
 ---
 
@@ -348,7 +348,7 @@ LINE登録特典の「**いまり式・恋愛相性の読み**」です。
 #### ①「現在地を知りたい」あなたへ
 **いまり恋愛鑑定室**（無料）
 誕生日だけで、今のあなたの方位とタイプが読めます。
-▶ https://[KAGA_REPLACE_VERCEL_URL]/Fortune/
+▶ https://fushimi-imari-site.vercel.app/Fortune/
 
 #### ②「声で深く相談したい」あなたへ
 **ココナラ電話占い**（初回30分無料）

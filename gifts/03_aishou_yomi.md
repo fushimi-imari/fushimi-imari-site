@@ -166,7 +166,7 @@ LINE特典の「**いまり式・恋愛相性の読み**」配信です。
 #### ①「自分のタイプを知りたい」あなたへ
 **いまり恋愛鑑定室**（無料）
 誕生日だけで、今のあなたの本質と方位が読めます。
-▶ https://[KAGA_REPLACE_VERCEL_URL]/Fortune/
+▶ https://fushimi-imari-site.vercel.app/Fortune/
 
 #### ②「声で深く相談したい」あなたへ
 **ココナラ電話占い**（初回30分無料）

@@ -159,7 +159,7 @@
 
 #### ホームケアから始めたい方へ
 **IMARI BEAUTY EDIT** ─ 自分の肌で確かめたものだけを並べました。
-▶ https://[KAGA_REPLACE_VERCEL_URL]/LP/
+▶ https://fushimi-imari-site.vercel.app/LP/
 
 #### 動く前に、声で誰かに相談したい方へ
 **ココナラ電話占い**（初回30分無料）
