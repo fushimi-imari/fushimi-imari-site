@@ -581,44 +581,6 @@ a:hover { opacity: 0.7; }
 .cat-card-cta::after { content: '→'; transition: transform 0.3s; }
 .cat-card:hover .cat-card-cta::after { transform: translateX(4px); }
 
-/* cat-card-sub : 控えめなセカンダリ動線（BEAUTY → MEN'S EDIT 等） */
-.cat-card-sub {
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(123, 45, 63, 0.12);
-}
-.cat-card-sub-link {
-  display: flex; align-items: center; gap: 10px;
-  text-decoration: none;
-  color: var(--color-brown);
-  transition: opacity 0.3s;
-}
-.cat-card-sub-link:hover { opacity: 0.72; }
-.cat-card-sub-thumb {
-  width: 40px; height: 40px;
-  border-radius: 2px;
-  object-fit: cover;
-  flex-shrink: 0;
-  filter: brightness(0.92);
-}
-.cat-card-sub-text {
-  display: flex; flex-direction: column; gap: 2px;
-  line-height: 1.3;
-}
-.cat-card-sub-label {
-  font-family: var(--font-en);
-  font-size: 9px;
-  letter-spacing: 2.5px;
-  color: var(--color-bordeaux);
-  font-weight: 600;
-}
-.cat-card-sub-title {
-  font-family: var(--font-jp);
-  font-size: 12px;
-  color: var(--color-brown);
-  letter-spacing: 0.06em;
-}
-
 /* image themes — 静止画は background-image、動画は <video class="cat-card-video"> */
 .cat-card-image.fortune {
   background: #4A2842 url('images/cat_fortune_static.jpg') center/cover no-repeat;
@@ -774,6 +736,37 @@ a:hover { opacity: 0.7; }
   margin-bottom: 4px;
   letter-spacing: 1px;
 }
+/* MEN'S HUB — featured-site の派生（より静かな陰影、男性誘導用） */
+.featured-site.featured-site-men {
+  background: linear-gradient(180deg, #F2EBE0 0%, #E8DDD0 100%);
+  padding: 80px 32px;
+}
+.featured-site-men .featured-site-image {
+  aspect-ratio: 4/5;
+  box-shadow: 0 16px 40px rgba(58,45,28,0.22);
+}
+.featured-site-men .featured-site-tag {
+  background: #3A2D1C;
+  letter-spacing: 3px;
+}
+.featured-site-men .featured-site-title {
+  font-size: clamp(32px, 4vw, 52px);
+  color: #3A2D1C;
+}
+.featured-site-men .featured-site-script {
+  color: var(--color-bordeaux);
+  font-size: 34px;
+}
+.featured-site-men .featured-site-stats strong {
+  color: #3A2D1C;
+}
+.featured-site-men .btn-primary {
+  background: #3A2D1C;
+}
+.featured-site-men .btn-primary:hover {
+  background: #5C4A33;
+}
+
 @media (max-width: 900px) {
   .featured-site-inner {
     grid-template-columns: 1fr;
@@ -1461,15 +1454,6 @@ footer {
         <div class="cat-card-title">30代の美容EDIT</div>
         <div class="cat-card-desc">朝の鏡が 楽しみになる素肌へ<br>30代からの効いた一品ずつを集めた場所</div>
         <a href="../LP/index.html" class="cat-card-cta">理想の一本に 出会いに行く</a>
-        <div class="cat-card-sub">
-          <a href="../Men/" class="cat-card-sub-link">
-            <img src="images/men_card.jpg" alt="MEN'S EDIT" class="cat-card-sub-thumb" loading="lazy">
-            <div class="cat-card-sub-text">
-              <span class="cat-card-sub-label">MEN'S EDIT</span>
-              <span class="cat-card-sub-title">男性のあなたへ — 静かな贈り物</span>
-            </div>
-          </a>
-        </div>
       </div>
     </div>
     <div class="cat-card">
@@ -1681,6 +1665,33 @@ footer {
         <div><strong>#PR</strong>明記の透明性</div>
       </div>
       <a href="../LP/index.html" class="btn-primary">理想の一本に 出会いに行く →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED SITE: IMARI MEN ===== -->
+<section class="featured-site featured-site-men" id="men-site">
+  <div class="featured-site-inner">
+    <div class="featured-site-image" style="background:#3A2D1C url('images/men_card.jpg') center/cover no-repeat;">
+      <div class="featured-site-tag">MEN'S SITE</div>
+    </div>
+    <div class="featured-site-content">
+      <div class="section-eyebrow">— MEN'S HUB —</div>
+      <h2 class="featured-site-title">IMARI MEN</h2>
+      <p class="featured-site-script">MEN'S EDIT</p>
+      <p class="featured-site-desc">
+        忙しい日々のなかに 静かに整える時間を<br><br>
+        頭皮から肌 香り 暮らしの心地まで<br>
+        <strong>男性のあなたのための一品ずつ</strong>を 編みました<br><br>
+        誰かのため ではなく あなた自身のために<br>
+        Imari の "MEN'S EDIT" を ここから
+      </p>
+      <div class="featured-site-stats">
+        <div><strong>5</strong>カテゴリ</div>
+        <div><strong>Coming Soon</strong>拡大中</div>
+        <div><strong>#PR</strong>明記の透明性</div>
+      </div>
+      <a href="../Men/" class="btn-primary">男性のあなたへ 覗きに行く →</a>
     </div>
   </div>
 </section>
