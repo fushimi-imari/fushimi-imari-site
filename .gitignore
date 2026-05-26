@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Backups
+*.bak
+*_backup*
+*~
+
+# Original/source assets (不要・容量削減)
+**/_original/
+**/source/
+**/採用素材_*/
+
+# Local dev tools
+iPhoneで確認する.command
+gifts/build_pdfs*.py
+
+# Heavy PDFs (LINE配布用・HP不要)
+gifts/*.pdf

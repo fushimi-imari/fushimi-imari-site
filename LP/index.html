@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="format-detection" content="telephone=no">
+
+<!-- ===== SEO ===== -->
+<title>FUSHIMI IMARI - BEAUTY EDIT | 富士美いまり 公式</title>
+<meta name="description" content="美しさは、ひとりでは育たない。30代の私が自分の肌で確かめた、毎日のEDIT。富士美いまりのキュレーションメディア。">
+<meta name="keywords" content="富士美いまり,Fushimi Imari,美容,キュレーション,30代,スキンケア,EDIT">
+
+<!-- ===== OGP (SNS共有用) ===== -->
+<meta property="og:title" content="FUSHIMI IMARI - BEAUTY EDIT">
+<meta property="og:description" content="美しさは、ひとりでは育たない。30代のキュレーター・富士美いまりが自分の肌で確かめた美容EDIT。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/images/ogp.jpg">
+<meta property="og:url" content="https://fushimi-imari.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ===== Favicon ===== -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<!-- ===== Google Fonts ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- ===== Meta Pixel - Imari_TrackA_Web (1004128645524633) ===== -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1004128645524633');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1004128645524633&ev=PageView&noscript=1"/></noscript>
+
+<!-- ===== Google Analytics 4（Fushimi Imari Web） ===== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NMES24S89F"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NMES24S89F');
+</script>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --color-bg: #ffffff;
+  --color-cream: #FDF7F4;        /* ほぼ白に薄ピンク */
+  --color-beige: #F2DCD5;        /* 薄めくすみピンク（旧ベージュ） */
+  --color-beige-light: #F8E8E2;  /* より淡いくすみピンク */
+  --color-beige-deep: #E8C9C0;   /* 深めくすみピンク */
+  --color-brown: #3A2D1C;        /* 文字・フッター（維持） */
+  --color-brown-mid: #8B6F60;    /* くすみピンク寄りに微調整 */
+  --color-brown-light: #B59A8E;  /* くすみピンク寄りに微調整 */
+  --color-divider: #f0dcd5;      /* 区切り線も薄ピンク */
+  --color-bordeaux: #7B2D3F;     /* アクセント・CTA（v2修正：未定義だったため追加） */
+  --color-sub: #9B7B6E;          /* サブテキスト（v2修正：未定義だったため追加） */
+  --serif-en: 'Cormorant Garamond', 'Times New Roman', serif;
+  --serif-jp: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --sans-jp: -apple-system, 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+html, body {
+  font-family: var(--sans-jp);
+  background: var(--color-bg);
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* ===== Top Bar ===== */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(74, 40, 42, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 10.5px;
+  color: #fff;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+@media (max-width: 600px) {
+  .topbar { font-size: 9.5px; padding: 7px 10px; letter-spacing: 1px; }
+}
+
+/* ===== Hero — Split Layout ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-cream);
+  overflow: hidden;
+}
+
+.hero-image {
+  position: relative;
+  background-color: var(--color-beige);
+  min-height: 600px;
+  overflow: hidden;
+}
+.hero-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: kenburns 22s ease-in-out infinite alternate;
+  will-change: transform;
+  display: block;
+}
+@keyframes kenburns {
+  0%   { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1.5%, 1%); }
+}
+
+.hero-overlay { display: none; }
+
+.hero-content {
+  position: relative;
+  background: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  padding: 36px 56px 60px;
+  justify-content: space-between;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.hero-logo {
+  position: static;
+  text-align: left;
+}
+
+.hero-logo h1 {
+  font-family: var(--serif-en);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-bordeaux);
+  letter-spacing: 6px;
+  text-shadow: none;
+}
+
+.hero-nav {
+  position: static;
+  display: flex;
+  gap: 22px;
+  justify-content: flex-end;
+  font-size: 11px;
+  color: var(--color-brown);
+  letter-spacing: 2.5px;
+}
+
+.hero-nav a:hover { opacity: 0.6; }
+
+.hero-caption {
+  position: static;
+  text-align: left;
+  color: var(--color-brown);
+  text-shadow: none;
+  margin: auto 0;
+  max-width: 520px;
+}
+
+.hero-script {
+  font-family: 'Tangerine', cursive;
+  font-size: 64px;
+  color: var(--color-bordeaux);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.hero-caption .main {
+  font-family: var(--serif-en);
+  font-weight: 400;
+  font-size: clamp(56px, 7vw, 96px);
+  line-height: 0.95;
+  letter-spacing: 4px;
+  color: var(--color-brown);
+}
+
+.hero-caption .sub {
+  font-family: var(--serif-jp);
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-top: 18px;
+  font-weight: 300;
+  color: var(--color-sub);
+}
+
+.hero-caption .secondary {
+  font-family: var(--serif-en);
+  font-weight: 400;
+  font-size: clamp(36px, 5vw, 64px);
+  letter-spacing: 5px;
+  margin-top: 8px;
+  color: var(--color-brown);
+}
+
+.hero-caption .desc {
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  margin-top: 28px;
+  color: var(--color-brown);
+  line-height: 2;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 36px;
+  padding: 18px 34px;
+  background: var(--color-bordeaux);
+  color: #fff;
+  font-family: var(--serif-jp);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.hero-cta:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* ===== SNS Cluster ===== */
+.sns-cluster {
+  display: inline-flex; align-items: center; gap: 12px;
+  margin-top: 20px;
+}
+.sns-cluster a {
+  width: 40px; height: 40px;
+  border: 1px solid var(--color-divider);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-brown);
+  transition: all 0.3s;
+}
+.sns-cluster a:hover {
+  background: var(--color-bordeaux);
+  border-color: var(--color-bordeaux);
+  color: #fff;
+  opacity: 1;
+  transform: translateY(-2px);
+}
+.sns-label {
+  font-family: var(--serif-en);
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--color-sub);
+  margin-right: 6px;
+  text-transform: uppercase;
+}
+.sns-cluster.sns-light a {
+  border-color: rgba(255,255,255,0.4);
+  color: #fff;
+}
+.sns-cluster.sns-light a:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--color-bordeaux);
+}
+.sns-cluster.sns-light .sns-label { color: rgba(255,255,255,0.8); }
+
+/* ===== Story / About ===== */
+.story {
+  background: var(--color-cream);
+  padding: clamp(60px, 10vw, 100px) 24px clamp(50px, 9vw, 90px);
+  text-align: center;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.story-label {
+  font-size: 11px;
+  color: var(--color-brown-light);
+  letter-spacing: 6px;
+  margin-bottom: 24px;
+}
+
+.story-text {
+  font-family: var(--serif-jp);
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 300;
+  line-height: 2.2;
+  color: var(--color-brown);
+  letter-spacing: 1.5px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.story-text .accent {
+  border-bottom: 1px solid var(--color-brown-light);
+  padding-bottom: 2px;
+}
+
+.story-author {
+  margin-top: 28px;
+  font-size: 12px;
+  color: var(--color-brown-light);
+  letter-spacing: 4px;
+  font-style: italic;
+}
+
+/* ===== Section Heading ===== */
+.section-heading {
+  text-align: center;
+  padding: clamp(60px, 8vw, 90px) 0 clamp(30px, 4vw, 50px);
+  background: var(--color-bg);
+}
+
+.section-heading h2 {
+  font-family: var(--serif-en);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 300;
+  letter-spacing: clamp(4px, 1vw, 10px);
+  color: var(--color-brown);
+}
+
+.section-heading .sub {
+  font-size: 11px;
+  color: var(--color-brown-light);
+  letter-spacing: 4px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* ===== Products ===== */
+.products {
+  background: var(--color-bg);
+  padding: 0 24px clamp(40px, 6vw, 80px);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(20px, 3vw, 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: var(--color-cream);
+  border: 1px solid var(--color-divider);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(58,45,28,0.1);
+}
+
+.product-image {
+  height: clamp(220px, 30vw, 280px);
+  background: var(--color-beige);
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.product-image[data-product="orbis"] { background-image: url('images/product-orbis.jpg'); background-color: #F2DCD5; }
+.product-image[data-product="mirable"] { background-image: url('images/product-mirable.jpg'); background-color: #E8C9C0; }
+.product-image[data-product="xology"] { background-image: url('images/product-xology.jpg'); background-color: #ECCFC5; }
+.product-image[data-product="alapras"] { background-image: url('images/product-alapras.jpg'); background-color: #EFD5CD; }
+
+.product-body {
+  background: #fff;
+  padding: 22px 24px 24px;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.product-no {
+  font-family: var(--serif-en);
+  font-size: 11px;
+  color: var(--color-brown-light);
+  letter-spacing: 4px;
+}
+
+.product-pr {
+  font-size: 8px;
+  color: #c5b8a8;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.product-title {
+  font-family: var(--serif-jp);
+  font-size: clamp(16px, 2vw, 19px);
+  font-weight: 400;
+  color: var(--color-brown);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.product-desc {
+  font-size: 12.5px;
+  color: var(--color-brown-mid);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-divider);
+  padding-top: 14px;
+}
+
+.product-price {
+  font-size: 12px;
+  color: var(--color-brown);
+  letter-spacing: 1px;
+}
+
+.product-link {
+  font-family: var(--serif-en);
+  font-size: 11px;
+  color: var(--color-brown);
+  letter-spacing: 3px;
+  border-bottom: 1px solid var(--color-brown);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.product-link:hover { opacity: 0.6; }
+
+/* ===== Scroll Animations ===== */
+/* HERO内要素の順次フェードイン（ロード時に1回再生） */
+@keyframes heroReveal {
+  from { opacity: 0; transform: translateY(16px); filter: blur(3px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+}
+.hero-caption > * {
+  opacity: 0;
+  animation: heroReveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hero-caption .hero-script  { animation-delay: 0.15s; }
+.hero-caption .main         { animation-delay: 0.35s; }
+.hero-caption .sub          { animation-delay: 0.55s; }
+.hero-caption .secondary    { animation-delay: 0.75s; }
+.hero-caption .desc         { animation-delay: 0.95s; }
+.hero-caption .hero-cta     { animation-delay: 1.15s; }
+.hero-caption .sns-cluster  { animation-delay: 1.35s; }
+
+.hero-top {
+  opacity: 0;
+  animation: heroReveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.05s;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ステッガー（カードを少しずつ遅延） */
+.fade-in.delay-1 { transition-delay: 0.05s; }
+.fade-in.delay-2 { transition-delay: 0.1s; }
+.fade-in.delay-3 { transition-delay: 0.15s; }
+.fade-in.delay-4 { transition-delay: 0.2s; }
+
+/* 商品カードの個別フェードイン */
+.product-card-mini, .coming-soon-card {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s, transform 0.3s;
+}
+
+.product-card-mini.in-view, .coming-soon-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* hover時のtransitionが上書きされるのを防ぐ */
+.product-card-mini.in-view:hover {
+  transform: translateY(-4px);
+}
+
+/* モーション過敏対応 */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in, .product-card-mini, .coming-soon-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hero-image::before { animation: none !important; }
+  .hero-caption > *, .hero-top {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    animation: none !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ===== Hamburger Menu ===== */
+.hamburger-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 200;
+  width: 46px;
+  height: 46px;
+  background: rgba(123, 45, 63, 0.92);
+  border: none;
+  border-radius: 50%;
+  color: #FDF7F4;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(123, 45, 63, 0.25);
+  transition: background 0.25s, transform 0.25s;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.hamburger-btn:hover { background: #7B2D3F; transform: scale(1.05); }
+.hamburger-btn:active { transform: scale(0.95); }
+
+.hamburger-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 13, 18, 0.45);
+  z-index: 198;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.hamburger-overlay.open { opacity: 1; visibility: visible; }
+
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  right: -110%;
+  width: 100%;
+  max-width: 380px;
+  height: 100vh;
+  background: #7B2D3F;
+  color: #FDF7F4;
+  z-index: 199;
+  transition: right 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15);
+}
+
+.hamburger-menu.open { right: 0; }
+
+.hamburger-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 26px;
+  border-bottom: 1px solid rgba(253, 247, 244, 0.2);
+}
+
+.hamburger-menu-logo {
+  font-family: var(--serif-jp);
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #FDF7F4;
+}
+
+.hamburger-menu-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #FDF7F4;
+  padding: 0;
+  line-height: 1;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+.hamburger-menu-close:hover { opacity: 0.7; }
+
+.hamburger-menu-nav {
+  padding: 36px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.hamburger-menu-nav a {
+  color: #FDF7F4;
+  font-family: var(--serif-en);
+  font-size: 22px;
+  letter-spacing: 4px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(253, 247, 244, 0.15);
+  padding: 4px 0 14px 0;
+  display: block;
+  font-weight: 300;
+  transition: padding-left 0.25s, opacity 0.2s;
+}
+
+.hamburger-menu-nav a:hover {
+  padding-left: 6px;
+  opacity: 0.85;
+}
+
+.hamburger-menu-nav a .ja-sub {
+  font-family: var(--serif-jp);
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  margin-top: 6px;
+  color: #E8C9C0;
+  display: block;
+  font-weight: 400;
+}
+
+.hamburger-menu-footer {
+  margin-top: auto;
+  padding: 20px 28px 28px;
+  border-top: 1px solid rgba(253, 247, 244, 0.2);
+}
+
+.hamburger-menu-sns {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  font-family: var(--serif-en);
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.hamburger-menu-sns a {
+  color: #FDF7F4;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.hamburger-menu-sns a:hover { opacity: 0.6; }
+
+.hamburger-menu-pr {
+  text-align: center;
+  font-size: 9px;
+  color: #E8C9C0;
+  letter-spacing: 1px;
+}
+
+/* メニュー開いてる間、bodyスクロール禁止 */
+body.menu-open { overflow: hidden; }
+
+/* ===== Category Index Nav ===== */
+.category-index {
+  display: flex;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 36px);
+  flex-wrap: wrap;
+  padding: clamp(20px, 3vw, 28px) clamp(20px, 5vw, 40px) clamp(8px, 2vw, 16px);
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+  margin: 0 auto;
+  background: var(--color-cream);
+}
+
+.category-index a {
+  font-family: var(--serif-en);
+  font-size: clamp(11px, 1.3vw, 14px);
+  letter-spacing: clamp(2px, 0.3vw, 4px);
+  color: var(--color-brown);
+  border-bottom: 1px solid transparent;
+  padding: 6px 4px 8px;
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category-index a:hover,
+.category-index a:focus {
+  border-bottom-color: var(--color-brown);
+  transform: translateY(-2px);
+}
+
+.category-index a .ja {
+  font-family: var(--serif-jp);
+  font-size: clamp(9px, 1vw, 11px);
+  letter-spacing: 2px;
+  color: var(--color-brown-light);
+  font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .category-index { gap: 14px; padding: 18px 16px 10px; }
+  .category-index a { padding: 4px 2px 6px; }
+}
+
+/* ===== Category Section ===== */
+.category-section {
+  background: var(--color-bg);
+  padding: clamp(40px, 6vw, 60px) 0 clamp(20px, 3vw, 30px);
+  border-bottom: 1px solid var(--color-divider);
+}
+.category-section:last-of-type { border-bottom: none; }
+
+.category-header {
+  padding: 0 clamp(20px, 5vw, 40px);
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category-header-left { display: flex; flex-direction: column; gap: 6px; }
+
+.category-title {
+  font-family: var(--serif-en);
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 300;
+  letter-spacing: clamp(2px, 0.5vw, 6px);
+  color: var(--color-brown);
+  line-height: 1;
+}
+
+.category-subtitle {
+  font-family: var(--serif-jp);
+  font-size: 11px;
+  color: var(--color-brown-light);
+  letter-spacing: 2px;
+}
+
+.category-count {
+  font-family: var(--serif-en);
+  font-size: 11px;
+  color: var(--color-brown-light);
+  letter-spacing: 3px;
+}
+
+.category-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 14px;
+  padding: 0 clamp(20px, 5vw, 40px) 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-divider) transparent;
+}
+
+.category-scroll::-webkit-scrollbar { height: 4px; }
+.category-scroll::-webkit-scrollbar-track { background: transparent; }
+.category-scroll::-webkit-scrollbar-thumb { background: var(--color-divider); border-radius: 2px; }
+
+.product-card-mini {
+  flex: 0 0 240px;
+  background: var(--color-cream);
+  border: 1px solid var(--color-divider);
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.product-card-mini > a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card-mini:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(58,45,28,0.08);
+}
+
+.product-image-mini {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-beige);
+  border-bottom: 1px solid var(--color-divider);
+  position: relative;
+  overflow: hidden;
+}
+.product-video-mini {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-image-mini[data-product="orbis"] {
+  background-image: url('https://www22.a8.net/svt/bgt?aid=260503433611&wid=001&eno=01&mid=s00000008657021009000&mc=1');
+  background-color: #FDF7F4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-image-mini[data-product="mirable"] {
+  background-image: url('https://www27.a8.net/svt/bgt?aid=260503433663&wid=001&eno=01&mid=s00000019713001007000&mc=1');
+  background-color: #FDF7F4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-image-mini[data-product="xology"] { background-image: url('images/product-xology.jpg'); background-color: #ECCFC5; }
+.product-image-mini[data-product="alapras"] {
+  background-image: url('https://www23.a8.net/svt/bgt?aid=260503433560&wid=001&eno=01&mid=s00000019122005003000&mc=1');
+  background-color: #FDF7F4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-image-mini[data-product="orbis-mr"] {
+  background-image: url('https://www25.a8.net/svt/bgt?aid=260506458330&wid=001&eno=01&mid=s00000008657018006000&mc=1');
+  background-color: #FDF7F4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-image-mini[data-product="morecon"] {
+  background-image: url('https://www22.a8.net/svt/bgt?aid=260506458541&wid=001&eno=01&mid=s00000017627001057000&mc=1');
+  background-color: #FDF7F4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-image-mini[data-product="olens"] {
+  background-image: url('https://www24.a8.net/svt/bgt?aid=260506458339&wid=001&eno=01&mid=s00000023041001132000&mc=1');
+  background-color: #FDF7F4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-image-mini[data-product="null-bw"] {
+  background-image: url('https://www29.a8.net/svt/bgt?aid=260506458559&wid=001&eno=01&mid=s00000014286012007000&mc=1');
+  background-color: #FDF7F4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-image-mini[data-product="null-mist"] {
+  background-image: url('https://www21.a8.net/svt/bgt?aid=260522614641&wid=001&eno=01&mid=s00000014286015006000&mc=1');
+  background-color: #FDF7F4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-image-mini[data-product="tria"] {
+  background-image: url('https://www24.a8.net/svt/bgt?aid=260524628105&wid=001&eno=01&mid=s00000023953003015000&mc=1');
+  background-color: #FDF7F4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-image-mini[data-product="ziip"] {
+  background-image: url('https://www21.a8.net/svt/bgt?aid=260524628111&wid=001&eno=01&mid=s00000023953002005000&mc=1');
+  background-color: #1a1416;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-image-mini[data-product="bioaestech"] {
+  background-image: url('https://www25.a8.net/svt/bgt?aid=260524628158&wid=001&eno=01&mid=s00000027467001005000&mc=1');
+  background-color: #FDF7F4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-image-mini[data-product="niplux"] {
+  background-image: url('https://www21.a8.net/svt/bgt?aid=260524628152&wid=001&eno=01&mid=s00000022145001004000&mc=1');
+  background-color: #FDF7F4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.product-body-mini { background: #fff; padding: 14px 16px 16px; }
+
+.product-meta-mini {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  align-items: flex-start;
+}
+
+.product-no-mini {
+  font-family: var(--serif-en);
+  font-size: 9px;
+  color: var(--color-brown-light);
+  letter-spacing: 3px;
+}
+
+.product-pr-mini {
+  font-size: 8px;
+  color: #c5b8a8;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+}
+
+.product-title-mini {
+  font-family: var(--serif-jp);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-brown);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.product-desc-mini {
+  font-size: 11px;
+  color: var(--color-brown-mid);
+  line-height: 1.7;
+  margin-bottom: 10px;
+  min-height: 38px;
+}
+
+.product-price-mini {
+  font-size: 11px;
+  color: var(--color-brown);
+  border-top: 1px solid var(--color-divider);
+  padding-top: 10px;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price-mini .arrow {
+  font-family: var(--serif-en);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* Coming Soon card */
+.coming-soon-card {
+  flex: 0 0 240px;
+  background: var(--color-cream);
+  border: 1px dashed var(--color-divider);
+  height: 360px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--color-brown-light);
+}
+
+.coming-soon-card .cs-label {
+  font-family: var(--serif-en);
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-style: italic;
+}
+
+.coming-soon-card .cs-jp {
+  font-family: var(--serif-jp);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+/* ===== CTA Banner ===== */
+.cta-banner {
+  background: var(--color-brown);
+  padding: clamp(60px, 8vw, 90px) 24px;
+  text-align: center;
+  color: var(--color-cream);
+}
+
+.cta-banner h2 {
+  font-family: var(--serif-en);
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 300;
+  letter-spacing: clamp(4px, 1vw, 8px);
+  margin-bottom: 14px;
+}
+
+.cta-banner p {
+  font-family: var(--serif-jp);
+  font-style: italic;
+  font-size: clamp(13px, 1.5vw, 16px);
+  color: var(--color-beige);
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+
+.cta-banner .btn {
+  display: inline-block;
+  border: 1px solid var(--color-beige);
+  color: var(--color-cream);
+  padding: 14px 40px;
+  font-size: 11px;
+  letter-spacing: 5px;
+  transition: background 0.3s;
+}
+
+.cta-banner .btn:hover {
+  background: var(--color-beige);
+  color: var(--color-brown);
+}
+
+/* ===== Profile ===== */
+.profile {
+  background: var(--color-cream);
+  padding: clamp(60px, 8vw, 90px) 24px;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 110px;
+  height: 110px;
+  background: var(--color-beige);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px var(--color-beige);
+  overflow: hidden;
+  position: relative;
+}
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.profile-name {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 300;
+  color: var(--color-brown);
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.profile-handle {
+  font-size: 12px;
+  color: var(--color-brown-light);
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
+
+.profile-text {
+  font-size: 13px;
+  color: var(--color-brown-mid);
+  line-height: 2;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.profile-link {
+  display: inline-block;
+  margin-top: 22px;
+  font-family: var(--serif-en);
+  font-size: 11px;
+  color: var(--color-brown);
+  letter-spacing: 4px;
+  border-bottom: 1px solid var(--color-brown);
+  padding-bottom: 2px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--color-brown);
+  color: var(--color-cream);
+  padding: clamp(40px, 6vw, 60px) 24px clamp(20px, 3vw, 30px);
+  text-align: center;
+}
+
+.footer-sns {
+  display: flex;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 40px);
+  margin-bottom: 24px;
+  font-family: var(--serif-en);
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.footer-sns a:hover { opacity: 0.7; }
+
+.footer-link {
+  font-size: 11px;
+  color: var(--color-beige);
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.footer-link:hover { opacity: 0.7; }
+
+.footer-pr {
+  font-size: 10px;
+  color: var(--color-brown-light);
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.footer-copyright {
+  font-size: 10px;
+  color: var(--color-brown-light);
+  letter-spacing: 1px;
+  border-top: 1px solid #5a4a32;
+  padding-top: 16px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .hero-image {
+    aspect-ratio: 4/5;
+    min-height: 60vh;
+  }
+  .hero-content {
+    padding: 28px 24px 50px;
+  }
+  .hero-top {
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  .hero-nav {
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .hero-script { font-size: 52px; }
+  .hero-caption .main { font-size: 56px; }
+  .hero-caption .secondary { font-size: 36px; }
+  .products-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hero-logo h1 { letter-spacing: 4px; }
+  .hero-caption { right: 20px; bottom: 30px; }
+  .hero-caption .main { font-size: 40px; letter-spacing: 2px; }
+  .hero-caption .secondary { font-size: 28px; letter-spacing: 2px; }
+  .hero-script { font-size: 42px; }
+  /* SNSアイコン タップ領域確保 (Apple HIG 44px) */
+  .sns-cluster a { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  /* PR表記 最低可読サイズ */
+  .product-pr-mini, .affil-pr { font-size: 11px; }
+}
+/* Sticky CTA 分のbody余白 */
+body { padding-bottom: 100px; }
+</style>
+</head>
+<body>
+
+<!-- ===== HAMBURGER MENU ===== -->
+<button class="hamburger-btn" onclick="toggleMenu()" aria-label="メニューを開く" id="hamburgerBtn">≡</button>
+<div class="hamburger-overlay" onclick="toggleMenu()" id="hamburgerOverlay"></div>
+<aside class="hamburger-menu" id="hamburgerMenu" aria-hidden="true">
+  <div class="hamburger-menu-header">
+    <div class="hamburger-menu-logo">FUSHIMI IMARI</div>
+    <button class="hamburger-menu-close" onclick="toggleMenu()" aria-label="閉じる">×</button>
+  </div>
+
+  <nav class="hamburger-menu-nav" aria-label="メインナビゲーション">
+    <a href="#cat-lens" onclick="closeMenuOnly()">
+      COLOR LENS
+      <span class="ja-sub">カラコン</span>
+    </a>
+    <a href="#cat-skincare" onclick="closeMenuOnly()">
+      SKINCARE
+      <span class="ja-sub">化粧品</span>
+    </a>
+    <a href="#cat-gadgets" onclick="closeMenuOnly()">
+      BEAUTY GADGETS
+      <span class="ja-sub">美容雑貨</span>
+    </a>
+    <a href="#cat-him" onclick="closeMenuOnly()">
+      FOR HIM
+      <span class="ja-sub">男性用ケア（LP内）</span>
+    </a>
+    <a href="../Men/" style="border-top:1px solid rgba(0,0,0,0.06);padding-top:18px;">
+      MEN'S EDIT
+      <span class="ja-sub">男性のための専用ページ →</span>
+    </a>
+    <a href="#profile" onclick="closeMenuOnly()">
+      PROFILE
+      <span class="ja-sub">いまりについて</span>
+    </a>
+  </nav>
+
+  <div class="hamburger-menu-footer">
+    <div class="hamburger-menu-sns">
+      <a href="https://www.instagram.com/fushimi_imari_/" target="_blank" rel="noopener">INSTAGRAM</a>
+      <a href="https://x.com/fushimi_imari_" target="_blank" rel="noopener" title="X メイン">X</a> <a href="https://x.com/imari_info" target="_blank" rel="noopener" title="X サブ（お知らせ用）">X Info</a>
+      <a href="https://www.tiktok.com/@fushimi_imari_" target="_blank" rel="noopener">TIKTOK</a>
+    </div>
+    <div class="hamburger-menu-pr">※当ページは広告を含みます</div>
+  </div>
+</aside>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  ✦ &nbsp;年齢を 戦うものから 味方にしていく日々を&nbsp; ✦
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-image"><img src="images/hero.jpg" alt="Fushimi Imari" loading="eager"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-top">
+      <div class="hero-logo">
+        <h1>FUSHIMI IMARI</h1>
+      </div>
+      <nav class="hero-nav">
+        <a href="#selection">SELECTION</a>
+        <a href="#story">STORY</a>
+        <a href="#profile">CURATOR</a>
+        <a href="#shop">EDITS</a>
+      </nav>
+    </div>
+
+    <div class="hero-caption">
+      <div class="hero-script">Imari</div>
+      <div class="main">BEAUTY</div>
+      <div class="sub">curated by Fushimi Imari</div>
+      <div class="secondary">EDIT</div>
+      <div class="desc">— 美しさは ひとりでは育たない<br class="pc-only">30代の揺らぐ肌の味方になる ひとつずつをここに</div>
+      <a href="#selection" class="hero-cta">理想の一本に 出会いに行く ↓</a>
+      <div class="sns-cluster">
+        <span class="sns-label">— FOLLOW</span>
+        <a href="https://www.instagram.com/fushimi_imari_/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-7.914 1.18 4 4 0 0 1 7.914-1.18z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://x.com/fushimi_imari_" target="_blank" rel="noopener" aria-label="X メイン @fushimi_imari_" title="X メイン"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://x.com/imari_info" target="_blank" rel="noopener" aria-label="X サブ @imari_info" title="X サブ（お知らせ用）"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" opacity="0.65"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.tiktok.com/@fushimi_imari_" target="_blank" rel="noopener" aria-label="TikTok"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STORY ===== -->
+<section class="story fade-in" id="story">
+  <div class="story-label">— STORY —</div>
+  <div class="story-text">
+    20代の頃 カメラの前で<br>
+    自分の見え方ばかり気にしていた。<br><br>
+
+    「見られる」痛みを知ったから<br>
+    鑑定の席に座ったとき<br>
+    他人の繊細さを 軽く扱えなくなった。<br><br>
+
+    見せる仕事と 読む仕事は<br class="pc-only">
+    同じ <span class="accent">「心の距離」</span> を扱う ふたつの入口。<br><br>
+
+    その入口に立ち続けるために<br>
+    自分の肌も身体も<br>
+    いちばんの味方にしておきたかった。<br><br>
+
+    年齢を 戦うものではなく 味方にしていく。<br>
+    明日のわたしを 少し好きにしてくれるものだけを ここに。
+  </div>
+  <div class="story-author">— Imari</div>
+  <div style="text-align:center;margin-top:32px;">
+    <div class="sns-cluster">
+      <span class="sns-label">— FOLLOW IMARI</span>
+      <a href="https://www.instagram.com/fushimi_imari_/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-7.914 1.18 4 4 0 0 1 7.914-1.18z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="https://x.com/fushimi_imari_" target="_blank" rel="noopener" aria-label="X メイン @fushimi_imari_" title="X メイン"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="https://x.com/imari_info" target="_blank" rel="noopener" aria-label="X サブ @imari_info" title="X サブ（お知らせ用）"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" opacity="0.65"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="https://www.tiktok.com/@fushimi_imari_" target="_blank" rel="noopener" aria-label="TikTok"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION HEADING ===== -->
+<div class="section-heading fade-in" id="selection">
+  <h2>SELECTION</h2>
+  <div class="sub">30代からの 撮影の合間に手にしたもの</div>
+</div>
+
+<!-- ===== CATEGORY INDEX (目次) ===== -->
+<nav class="category-index" aria-label="カテゴリ目次">
+  <a href="#cat-lens">
+    <span>COLOR LENS</span>
+    <span class="ja">瞳の余白</span>
+  </a>
+  <a href="#cat-skincare">
+    <span>SKINCARE</span>
+    <span class="ja">毎日の3STEP</span>
+  </a>
+  <a href="#cat-gadgets">
+    <span>BEAUTY GADGETS</span>
+    <span class="ja">ご褒美の道具</span>
+  </a>
+  <a href="#cat-him">
+    <span>FOR HIM</span>
+    <span class="ja">いちばん近い人へ</span>
+  </a>
+  <a href="#profile">
+    <span>CURATOR</span>
+    <span class="ja">いまりの素顔</span>
+  </a>
+</nav>
+
+<!-- ===== CATEGORY 1: COLOR LENS / カラコン ===== -->
+<section class="category-section" id="cat-lens">
+  <div class="category-header fade-in">
+    <div class="category-header-left">
+      <h3 class="category-title">COLOR LENS</h3>
+      <div class="category-subtitle">現場のスタッフに教わった 瞳の選択</div>
+    </div>
+    <div class="category-count">— 2 ITEMS</div>
+  </div>
+  <div class="category-scroll">
+
+    <!-- OLENS -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3K2I+5LTYUQ+4XSA+6QMKH" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="olens">
+          <video class="product-video-mini" autoplay loop muted playsinline>
+            <source src="images/lens_olens.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.01</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">OLENS</h4>
+          <p class="product-desc-mini">光をまとった瞳で 理想の自分に近づく<br>ナチュラルに透ける一枚</p>
+          <div class="product-price-mini">
+            <span>瞳から はじまる更新</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www24.a8.net/0.gif?a8mat=4B3K2I+5LTYUQ+4XSA+6QMKH" alt="" style="position:absolute;">
+    </article>
+
+    <!-- MORECON -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3K2I+8Y3J1U+3S0E+6AJV5" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="morecon">
+          <video class="product-video-mini" autoplay loop muted playsinline>
+            <source src="images/lens_morecon.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.02</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">モアコン</h4>
+          <p class="product-desc-mini">今日のわたしを 瞳から選ぶ自由<br>気分で纏う365通りのデザイン</p>
+          <div class="product-price-mini">
+            <span>なりたい私で 過ごす一日</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www22.a8.net/0.gif?a8mat=4B3K2I+8Y3J1U+3S0E+6AJV5" alt="" style="position:absolute;">
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== CATEGORY 2: SKINCARE / 化粧品 ===== -->
+<section class="category-section" id="cat-skincare">
+  <div class="category-header fade-in">
+    <div class="category-header-left">
+      <h3 class="category-title">SKINCARE</h3>
+      <div class="category-subtitle">30代の揺らぐ肌に いつものを変えた話</div>
+    </div>
+    <div class="category-count">— 5 ITEMS</div>
+  </div>
+  <div class="category-scroll">
+
+    <!-- ORBIS U DOT -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3HQH+A3RVEA+1USQ+3HEBFM" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="orbis"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.01</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">オルビスユー ドット</h4>
+          <p class="product-desc-mini">朝の鏡が ふっと楽しみになる素肌へ<br>3STEPだけの透明感ケア</p>
+          <div class="product-price-mini">
+            <span>一本で 透明感の朝へ</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3HQH+A3RVEA+1USQ+3HEBFM" alt="" style="position:absolute;">
+    </article>
+
+    <!-- XOLOGY（5/11 承認済み・バリュコマ実リンク反映） -->
+    <article class="product-card-mini">
+      <a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3767790&pid=892610241" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="xology"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.02</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">Xology</h4>
+          <p class="product-desc-mini">通えない日も 鏡の前で理想の肌へ<br>クリニック発の自宅ケア</p>
+          <div class="product-price-mini">
+            <span>30代の本格ケアを 自宅で</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- ALAPRAS（5/8 承認済み・実リンク反映） -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3HQH+99ERJM+43JO+TSBE9" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="alapras"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.03</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">アラプラス コンセントレートセラム</h4>
+          <p class="product-desc-mini">指先が思わず止まる 触れたくなる肌へ<br>一本でハリと潤いを</p>
+          <div class="product-price-mini">
+            <span>大切な日の 前夜の一本</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B3HQH+99ERJM+43JO+TSBE9" alt="" style="position:absolute;">
+    </article>
+
+    <!-- HUAXIZI 花西子（5/11 承認済み） -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=457VJH+FXXVXU+5M44+5YJRM" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="huaxizi"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.04</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">花西子（フローラシス）</h4>
+          <p class="product-desc-mini">いつもの自分に 東洋の余白を一筆<br>静かに目を奪う化粧品</p>
+          <div class="product-price-mini">
+            <span>違う私で 出かける日に</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=457VJH+FXXVXU+5M44+5YJRM" alt="" style="position:absolute;">
+    </article>
+
+    <!-- ONSEN-SUI 99 温泉水99（5/11 承認済み） -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=457VJH+C7ZCTU+JYC+C03K3" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="onsensui"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.05</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">温泉水99</h4>
+          <p class="product-desc-mini">乾きを忘れた ふっくらした朝の肌へ<br>毎日の水を 少しだけ良いものに</p>
+          <div class="product-price-mini">
+            <span>揺らぐ季節の 立て直し</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=457VJH+C7ZCTU+JYC+C03K3" alt="" style="position:absolute;">
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== CATEGORY 3: BEAUTY GADGETS / 美容雑貨 ===== -->
+<section class="category-section" id="cat-gadgets">
+  <div class="category-header fade-in">
+    <div class="category-header-left">
+      <h3 class="category-title">BEAUTY GADGETS</h3>
+      <div class="category-subtitle">撮影前夜に頼っている 小さな道具</div>
+    </div>
+    <div class="category-count">— 5 ITEMS</div>
+  </div>
+  <div class="category-scroll">
+
+    <!-- TRIA（5/24 即時承認・実リンク反映） -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3Y38+1QIJAQ+54TM+HY7W1" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="tria"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.01</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">トリア</h4>
+          <p class="product-desc-mini">ご自宅でプロ仕様のケアを<br>サロン任せをやめた日からの 自分時間</p>
+          <div class="product-price-mini">
+            <span>触れる肌に 自信を編む</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B3Y38+1QIJAQ+54TM+HVFKY" alt="" style="position:absolute;">
+    </article>
+
+    <!-- ZIIP（5/24 即時承認・実リンク反映） -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3Y38+1U34XE+54TM+BXQOH" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="ziip"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.02</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">ZIIP</h4>
+          <p class="product-desc-mini">微弱電流でととのえる、夜のひとてま<br>明日の輪郭に、静かに効いてくる</p>
+          <div class="product-price-mini">
+            <span>夜の鏡が、変わる</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B3Y38+1U34XE+54TM+BWVTE" alt="" style="position:absolute;">
+    </article>
+
+    <!-- BIOAESTECH（5/24 即時承認・実リンク反映） -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3Y38+2M2ICY+5VXQ+5ZEMP" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="bioaestech"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.03</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">BIOAESTECH<br>デュアルオーブ ディープリフト</h4>
+          <p class="product-desc-mini">頬とフェイスラインの 静かな引き上げ<br>30代の輪郭への小さな投資</p>
+          <div class="product-price-mini">
+            <span>初回 ¥8,000相当の手応えを</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3Y38+2M2ICY+5VXQ+5YJRM" alt="" style="position:absolute;">
+    </article>
+
+    <!-- NIPLUX（5/24 即時承認・実リンク反映） -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3Y38+2IHWQA+4QVE+5Z6WX" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="niplux"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.04</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">NIPLUX</h4>
+          <p class="product-desc-mini">目元・首・足、 ながらケアを支える道具たち<br>頑張った日への 小さなご褒美</p>
+          <div class="product-price-mini">
+            <span>癒しの時間を 暮らしに編む</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3Y38+2IHWQA+4QVE+5Z6WX" alt="" style="position:absolute;">
+    </article>
+
+    <!-- ケノン（5/25 新規承認・11-0210・A8） -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3Y38+2GPLWY+2BNE+IC5FL" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini"><img src="https://www28.a8.net/svt/bgt?aid=260524628149&amp;wid=001&amp;eno=01&amp;mid=s00000010841003080000&amp;mc=1" alt="ケノン" loading="lazy" referrerpolicy="no-referrer"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.05</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">ケノン</h4>
+          <p class="product-desc-mini">サロン任せを 手放した日からの ひとり時間。<br>夜の余白に 静かに頼る道具</p>
+          <div class="product-price-mini">
+            <span>ご褒美ケアを、習慣に</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B3Y38+2GPLWY+2BNE+IC5FL" alt="" style="position:absolute;">
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== CATEGORY 4: FOR HIM / 男性用ケアアイテム ===== -->
+<section class="category-section" id="cat-him">
+  <div class="category-header fade-in">
+    <div class="category-header-left">
+      <h3 class="category-title">FOR HIM</h3>
+      <div class="category-subtitle">いちばん近い人へ、贈りたいもの</div>
+    </div>
+    <div class="category-count">— 3 ITEMS</div>
+  </div>
+  <div class="category-scroll">
+
+    <!-- ORBIS Mr. -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3K2I+5GH2EQ+1USQ+2Z8T76" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="orbis-mr"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.01</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">オルビス Mr.</h4>
+          <p class="product-desc-mini">大切な人の肌が ふっと整う贈り物<br>男性のためのシンプルケア</p>
+          <div class="product-price-mini">
+            <span>触れたくなる肌を 隣に</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B3K2I+5GH2EQ+1USQ+2Z8T76" alt="" style="position:absolute;">
+    </article>
+
+    <!-- NULL FRAGRANCE BODY WASH -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3K2I+98TBXU+328C+1ZHILT" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="null-bw"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.02</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">NULL ボディウォッシュ</h4>
+          <p class="product-desc-mini">ふと近づきたくなる 肌の香りへ<br>清潔感を纏う毎日のケア</p>
+          <div class="product-price-mini">
+            <span>距離が近づく 一本</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B3K2I+98TBXU+328C+1ZHILT" alt="" style="position:absolute;">
+    </article>
+
+    <!-- NULL ALL-IN-ONE MIST（5/22 新規承認・実リンク反映） -->
+    <article class="product-card-mini">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJA+ALMVJM+328C+2HCB1D" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini" data-product="null-mist"></div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.03</span>
+            <span class="product-pr-mini">Ⓟ&nbsp;広告</span>
+          </div>
+          <h4 class="product-title-mini">NULL オールインワンミスト</h4>
+          <p class="product-desc-mini">忙しい朝でも 3秒で整う<br>大切な人の肌に、ひと吹きの余白</p>
+          <div class="product-price-mini">
+            <span>朝の3秒に 静けさを</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B3WJA+ALMVJM+328C+2HCB1D" alt="" style="position:absolute;">
+    </article>
+
+  </div>
+
+  <!-- MEN'S EDIT 誘導 -->
+  <div style="text-align:center;margin-top:36px;padding:24px;background:#F8F4F0;border:1px solid var(--color-divider);">
+    <div style="font-family:var(--serif-en);font-size:11px;letter-spacing:0.3em;color:var(--color-bordeaux);margin-bottom:8px;">MEN'S EDIT</div>
+    <p style="font-size:13px;color:var(--color-brown);margin:0 0 14px;line-height:1.8;">いちばん近いあなたへ。<br>男性のための セレクションを 別の入口に そろえています。</p>
+    <a href="../Men/" class="btn" style="display:inline-block;padding:12px 28px;background:var(--color-bordeaux);color:#fff;text-decoration:none;font-family:var(--serif-en);font-size:12px;letter-spacing:0.25em;">FOR HIM (MEN'S EDIT) →</a>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner fade-in" id="shop">
+  <h2>ALL EDITS</h2>
+  <p>年齢肌の味方になる 一本に出会える場所</p>
+  <a href="#cat-lens" class="btn">最初の一本を 選びに行く →</a>
+</section>
+
+<!-- ===== PROFILE ===== [v3 拡張] 仕様書通りの詳細プロフィールへ -->
+<section class="profile fade-in" id="profile">
+  <div class="profile-photo"><img src="images/profile.jpg" alt="Fushimi Imari" loading="lazy"></div>
+  <div class="profile-name">Fushimi Imari</div>
+  <div class="profile-handle">@fushimi_imari_</div>
+  <p class="profile-text">
+    富士美いまり / Fushimi Imari<br>
+    グラビアモデル × ライフキュレーター<br><br>
+    169cm 骨格ストレート / ブルベ夏 / 顔タイプエレガント<br>
+    占い鑑定実績 1,000+人 / 恋愛鑑定リピート率 96%<br><br>
+    「見られる仕事だからこそ、自分の肌も、身体も<br>いちばんの味方にしたかった」<br>
+    でも、美しさはひとりでは育たない。撮影の合間、先輩や後輩からふと届く「これ、ほんとに良かったよ」。<br>
+    受け取って、試して、続けて。明日のわたしを少し好きにしてくれるものだけを、同世代へ届けます。
+  </p>
+  <div style="display:inline-flex; gap:32px; margin-top:24px; padding:16px 0; border-top:1px solid var(--color-divider); border-bottom:1px solid var(--color-divider);">
+    <div style="text-align:center;">
+      <div style="font-family:var(--serif-en); font-size:22px; color:var(--color-bordeaux); font-weight:600;">76K+</div>
+      <div style="font-size:10px; color:var(--color-brown-light); letter-spacing:1.5px; margin-top:2px;">FOLLOWERS</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-family:var(--serif-en); font-size:22px; color:var(--color-bordeaux); font-weight:600;">1,000+</div>
+      <div style="font-size:10px; color:var(--color-brown-light); letter-spacing:1.5px; margin-top:2px;">鑑定実績</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-family:var(--serif-en); font-size:22px; color:var(--color-bordeaux); font-weight:600;">96%</div>
+      <div style="font-size:10px; color:var(--color-brown-light); letter-spacing:1.5px; margin-top:2px;">リピート率</div>
+    </div>
+  </div>
+  <br>
+  <a href="https://www.instagram.com/fushimi_imari_/" class="profile-link" target="_blank" rel="noopener">Instagramを見る →</a>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div style="font-family:'Cormorant Garamond',serif;font-size:38px;letter-spacing:6px;color:var(--color-beige);opacity:0.4;text-align:center;margin-bottom:24px;">FUSHIMI IMARI</div>
+  <div style="text-align:center;color:var(--color-beige);opacity:0.7;font-family:'Shippori Mincho',serif;font-size:13px;letter-spacing:0.2em;margin-bottom:32px;">美しさは、ひとりでは育たない</div>
+  <div class="footer-sns">
+    <a href="https://www.instagram.com/fushimi_imari_/" target="_blank" rel="noopener">INSTAGRAM</a>
+    <a href="https://x.com/fushimi_imari_" target="_blank" rel="noopener" title="X メイン">X</a> <a href="https://x.com/imari_info" target="_blank" rel="noopener" title="X サブ（お知らせ用）">X Info</a>
+    <a href="https://www.tiktok.com/@fushimi_imari_" target="_blank" rel="noopener">TIKTOK</a>
+  </div>
+  <a href="https://lit.link/fushimi_imari_" class="footer-link" target="_blank" rel="noopener">撮影会・お仕事のご依頼 →</a>
+  <div class="footer-pr">
+    ※当ページは広告を含みます<br>
+    <a href="../legal/privacy-policy.html" style="color:var(--color-beige);margin:0 8px;">プライバシーポリシー</a>・<a href="../legal/tokushoho.html" style="color:var(--color-beige);margin:0 8px;">特商法表記</a>・<a href="../legal/terms.html" style="color:var(--color-beige);margin:0 8px;">利用規約</a><br>
+    <a href="../legal/advertising-disclosure.html" style="color:var(--color-beige);margin:0 8px;">広告・PR表記について</a>・<a href="../legal/cosmetic-efficacy.html" style="color:var(--color-beige);margin:0 8px;">化粧品の効能効果について</a>
+  </div>
+  <div class="footer-copyright">
+    © 2026 Fushimi Imari. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  // === リロード時に必ずページ最上部から表示する（TOP BARはfixedで常時表示） ===
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.addEventListener('load', () => {
+    if (!window.location.hash) window.scrollTo(0, 0);
+  });
+
+  function toggleMenu() {
+    const menu = document.getElementById('hamburgerMenu');
+    const overlay = document.getElementById('hamburgerOverlay');
+    const btn = document.getElementById('hamburgerBtn');
+    const isOpen = menu.classList.toggle('open');
+    overlay.classList.toggle('open', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
+    menu.setAttribute('aria-hidden', !isOpen);
+    btn.textContent = isOpen ? '×' : '≡';
+    btn.setAttribute('aria-label', isOpen ? '閉じる' : 'メニューを開く');
+  }
+
+  function closeMenuOnly() {
+    const menu = document.getElementById('hamburgerMenu');
+    const overlay = document.getElementById('hamburgerOverlay');
+    const btn = document.getElementById('hamburgerBtn');
+    menu.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    menu.setAttribute('aria-hidden', 'true');
+    btn.textContent = '≡';
+    btn.setAttribute('aria-label', 'メニューを開く');
+  }
+
+  // ESCキーで閉じる
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenuOnly();
+  });
+
+  // ===== Scroll Fade-In Animation =====
+  (function() {
+    if (!('IntersectionObserver' in window)) {
+      // 古いブラウザは即表示
+      document.querySelectorAll('.fade-in, .product-card-mini, .coming-soon-card')
+        .forEach(el => { el.classList.add('visible', 'in-view'); });
+      return;
+    }
+
+    // セクション全体のフェードイン
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+    // 商品カード個別のステッガーフェードイン
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, idx) => {
+        if (entry.isIntersecting) {
+          const siblings = Array.from(entry.target.parentNode.children);
+          const i = siblings.indexOf(entry.target);
+          setTimeout(() => entry.target.classList.add('in-view'), Math.min(i, 4) * 80);
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+
+    document.querySelectorAll('.product-card-mini, .coming-soon-card').forEach(el => cardObserver.observe(el));
+  })();
+</script>
+
+</body>
+</html>

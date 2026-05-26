@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>いまり恋愛鑑定室 — Imari Love Consulting</title>
+    <meta name="description" content="【無料】四柱推命で読み解く あなたの恋愛タイプと相性。富士美いまりの恋愛鑑定室。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ===== Google Analytics 4（Fushimi Imari Web） ===== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMES24S89F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NMES24S89F');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital@0;1&family=Shippori+Mincho:wght@400;500;600&display=swap');
+        :root {
+            --text-bordeaux: #8b4e4e;
+            --text-bordeaux-dark: #6e3d3d;
+            --text-bordeaux-light: #b88a8a;
+            --text-soft: #5a3a3a;
+            --white: #ffffff;
+            --rose-light: #fcf8f8;
+            --rose-mist: #f6efee;
+            --rose-deep: #e9d8d6;
+            --line: rgba(139, 78, 78, 0.18);
+            --line-soft: rgba(139, 78, 78, 0.08);
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Shippori Mincho', serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-soft);
+            letter-spacing: 0.06em;
+            line-height: 1.8;
+            background:
+              radial-gradient(circle at 20% 10%, rgba(255, 230, 225, 0.45) 0%, transparent 55%),
+              radial-gradient(circle at 80% 60%, rgba(220, 195, 195, 0.30) 0%, transparent 60%),
+              linear-gradient(180deg, #fcf8f8 0%, #f6efee 60%, #f1e5e3 100%);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* 背景画像（SVG / PNG どちらか） */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: url('background.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.85;
+            z-index: -2;
+        }
+        body.has-bg::before { background-image: url('background.png'); opacity: 1; }
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(252, 248, 248, 0.35);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* === ナビ === */
+        .nav-bar {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 32px;
+            z-index: 10;
+        }
+        .back-link {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            color: var(--text-bordeaux);
+            text-decoration: none;
+            opacity: 0.65;
+            letter-spacing: 0.25em;
+            transition: opacity 0.3s;
+        }
+        .back-link:hover { opacity: 1; }
+        .nav-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            color: var(--text-bordeaux);
+            opacity: 0.5;
+            letter-spacing: 0.3em;
+        }
+
+        /* === ヘッダー === */
+        header {
+            text-align: center;
+            padding: 130px 24px 60px;
+            position: relative;
+        }
+        header::before {
+            content: "✦";
+            display: block;
+            color: var(--text-bordeaux-light);
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            letter-spacing: 1em;
+            opacity: 0.6;
+        }
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.6rem, 5vw, 2.4rem);
+            margin: 0 0 16px;
+            font-weight: 400;
+            color: var(--text-bordeaux-dark);
+            letter-spacing: 0.15em;
+        }
+        header .jp-title {
+            display: block;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            color: var(--text-bordeaux);
+            letter-spacing: 0.5em;
+            font-weight: 500;
+        }
+        .ornament {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 32px auto 0;
+            gap: 12px;
+            opacity: 0.45;
+        }
+        .ornament .line {
+            width: 60px;
+            height: 1px;
+            background: var(--text-bordeaux);
+        }
+        .ornament .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--text-bordeaux);
+        }
+
+        /* === Intro === */
+        .intro-text {
+            max-width: 540px;
+            margin: 0 auto 80px;
+            text-align: center;
+            font-size: 0.85rem;
+            line-height: 2.4;
+            color: var(--text-soft);
+            padding: 0 24px;
+        }
+        .intro-text .en {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.85rem;
+            display: block;
+            margin-top: 16px;
+            color: var(--text-bordeaux-light);
+            letter-spacing: 0.15em;
+        }
+        .intro-text strong {
+            font-weight: 500;
+            color: var(--text-bordeaux-dark);
+            letter-spacing: 0.12em;
+        }
+
+        /* === 四柱推命についての折りたたみ === */
+        .fortune-explain-wrap {
+            max-width: 540px;
+            margin: -32px auto 64px;
+            padding: 0 24px;
+        }
+        .fortune-explain {
+            background: rgba(255, 255, 255, 0.55);
+            border: 1px solid var(--line);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            transition: background 0.3s ease;
+        }
+        .fortune-explain[open] {
+            background: rgba(255, 255, 255, 0.78);
+        }
+        .fortune-explain summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 18px 22px;
+            font-family: 'Shippori Mincho', serif;
+            font-size: 0.88rem;
+            color: var(--text-bordeaux-dark);
+            letter-spacing: 0.14em;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .fortune-explain summary::-webkit-details-marker { display: none; }
+        .fortune-explain summary::marker { content: ""; }
+        .fortune-explain-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.32em;
+            color: var(--text-bordeaux);
+            opacity: 0.7;
+        }
+        .fortune-explain-arrow {
+            margin-left: auto;
+            font-size: 1.1rem;
+            color: var(--text-bordeaux);
+            opacity: 0.7;
+            transition: transform 0.35s ease;
+            line-height: 1;
+        }
+        .fortune-explain[open] .fortune-explain-arrow {
+            transform: rotate(45deg);
+        }
+        .fortune-explain-body {
+            padding: 4px 22px 24px;
+        }
+        .fortune-explain-body::before {
+            content: "";
+            display: block;
+            height: 1px;
+            background: var(--line-soft);
+            margin-bottom: 20px;
+        }
+        .fortune-explain-body p {
+            font-size: 0.84rem;
+            line-height: 2.2;
+            color: var(--text-soft);
+            letter-spacing: 0.08em;
+            margin: 0;
+        }
+        .fortune-explain-body strong {
+            font-weight: 500;
+            color: var(--text-bordeaux-dark);
+            letter-spacing: 0.1em;
+        }
+
+        /* === メインカード === */
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 24px 60px;
+        }
+        .main-card {
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid var(--line);
+            padding: 60px 48px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 40px rgba(139, 78, 78, 0.06);
+            text-align: center;
+            position: relative;
+        }
+        .main-card::before,
+        .main-card::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border: 1px solid var(--text-bordeaux);
+            opacity: 0.35;
+        }
+        .main-card::before { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+        .main-card::after { bottom: 12px; right: 12px; border-left: none; border-top: none; }
+
+        .label-en {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            display: block;
+            margin-bottom: 14px;
+            color: var(--text-bordeaux);
+            letter-spacing: 0.4em;
+        }
+        .input-group { margin-bottom: 48px; }
+        input[type="date"] {
+            border: none;
+            border-bottom: 1px solid var(--text-bordeaux-light);
+            padding: 12px 0;
+            font-size: 1.05rem;
+            width: 100%;
+            max-width: 280px;
+            text-align: center;
+            outline: none;
+            background: transparent;
+            color: var(--text-bordeaux-dark);
+            font-family: inherit;
+            letter-spacing: 0.1em;
+            transition: border-color 0.3s;
+        }
+        input[type="date"]:focus { border-color: var(--text-bordeaux-dark); }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+        .btn {
+            background-color: var(--text-bordeaux);
+            border: 1px solid var(--text-bordeaux);
+            color: var(--white);
+            padding: 22px 0;
+            width: 100%;
+            max-width: 360px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: 0.4s ease;
+            letter-spacing: 0.18em;
+            font-family: inherit;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::after {
+            content: "";
+            position: absolute;
+            inset: 4px;
+            border: 1px solid rgba(255,255,255,0.18);
+            pointer-events: none;
+            transition: inset 0.3s;
+        }
+        .btn:hover {
+            background-color: var(--white);
+            color: var(--text-bordeaux);
+        }
+        .btn:hover::after {
+            border-color: rgba(139, 78, 78, 0.35);
+        }
+        .btn span {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            margin-bottom: 6px;
+            letter-spacing: 0.25em;
+            opacity: 0.85;
+        }
+
+        /* === 結果エリア === */
+        #result-area {
+            display: none;
+            margin-top: 60px;
+            animation: fadeIn 1.2s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .res-divider {
+            width: 1px;
+            height: 40px;
+            background: var(--text-bordeaux-light);
+            margin: 0 auto 28px;
+            opacity: 0.5;
+        }
+        .res-score {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.8rem;
+            margin: 18px 0 28px;
+            color: var(--text-bordeaux-dark);
+            letter-spacing: 0.05em;
+            font-weight: 400;
+        }
+        .res-advice {
+            font-size: 0.92rem;
+            line-height: 2.4;
+            padding: 32px;
+            background: rgba(255,255,255,0.92);
+            border: 1px solid var(--line-soft);
+            text-align: left;
+            white-space: pre-wrap;
+            color: var(--text-soft);
+        }
+
+        /* 鑑定結果直後のLINE CTA */
+        .res-line-cta {
+            margin-top: 36px;
+            padding: 28px 24px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(252, 240, 238, 0.78) 100%);
+            border: 1px solid var(--text-bordeaux-light);
+            text-align: center;
+        }
+        .res-line-cta-lead {
+            font-size: 0.82rem;
+            color: var(--text-bordeaux-dark);
+            line-height: 2;
+            letter-spacing: 0.08em;
+            margin: 0 0 18px;
+        }
+        .res-line-cta-lead strong {
+            font-weight: 500;
+            color: var(--text-bordeaux);
+        }
+        .res-line-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #06C755;
+            color: #fff;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            padding: 18px 36px;
+            text-decoration: none;
+            font-family: inherit;
+            border: 1px solid #06C755;
+            border-radius: 999px;
+            transition: 0.35s ease;
+            font-weight: 500;
+            line-height: 1.4;
+            box-shadow: 0 4px 14px rgba(6, 199, 85, 0.18);
+        }
+        .res-line-btn:hover {
+            background: #04a847;
+            border-color: #04a847;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(6, 199, 85, 0.32);
+        }
+        .res-line-btn svg {
+            flex-shrink: 0;
+        }
+        .res-line-note {
+            display: block;
+            margin-top: 12px;
+            font-size: 0.7rem;
+            color: var(--text-soft);
+            opacity: 0.7;
+            letter-spacing: 0.05em;
+        }
+
+        /* === お知らせ === */
+        .notice-section {
+            max-width: 600px;
+            margin: 60px auto 20px;
+            padding: 0 24px;
+        }
+        .notice-card {
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid var(--text-bordeaux-light);
+            padding: 32px 28px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .notice-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.4em;
+            color: var(--text-bordeaux);
+            opacity: 0.65;
+            margin-bottom: 14px;
+        }
+        .notice-body {
+            font-size: 0.92rem;
+            line-height: 2;
+            color: var(--text-bordeaux-dark);
+            margin: 0 0 12px;
+            letter-spacing: 0.06em;
+        }
+        .notice-body strong {
+            font-weight: 600;
+            color: var(--text-bordeaux);
+        }
+        .notice-sub {
+            font-size: 0.75rem;
+            color: var(--text-soft);
+            opacity: 0.75;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.9;
+        }
+
+        /* === バナーセクション === */
+        .banner-section {
+            max-width: 760px;
+            margin: 60px auto 80px;
+            padding: 0 24px;
+            text-align: center;
+        }
+        .banner-divider {
+            width: 80px;
+            height: 1px;
+            background: var(--text-bordeaux-light);
+            margin: 0 auto 36px;
+            opacity: 0.5;
+        }
+        .banner-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.4em;
+            color: var(--text-bordeaux);
+            opacity: 0.7;
+            margin-bottom: 12px;
+        }
+        .banner-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.25rem;
+            margin: 0 0 12px;
+            color: var(--text-bordeaux-dark);
+            letter-spacing: 0.18em;
+            font-weight: 500;
+        }
+        .banner-sub {
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            opacity: 0.75;
+            margin: 0 auto 40px;
+            max-width: 480px;
+            line-height: 2.2;
+            letter-spacing: 0.12em;
+        }
+        .pr-note {
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            color: var(--text-bordeaux);
+            opacity: 0.4;
+            margin-top: 20px;
+            letter-spacing: 0.3em;
+        }
+        .banner-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        .banner-card {
+            display: block;
+            padding: 28px 32px;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid var(--line);
+            text-decoration: none;
+            color: var(--text-bordeaux);
+            transition: 0.35s ease;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner-card::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: var(--text-bordeaux);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        .banner-card:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(139, 78, 78, 0.10);
+        }
+        .banner-card:hover::after { transform: scaleX(1); }
+        .banner-card-en {
+            font-family: 'Cinzel', serif;
+            font-size: 0.62rem;
+            letter-spacing: 0.3em;
+            opacity: 0.65;
+            margin-bottom: 8px;
+            color: var(--text-bordeaux);
+        }
+        .banner-card-name {
+            font-size: 1.05rem;
+            margin: 0 0 8px;
+            letter-spacing: 0.1em;
+            color: var(--text-bordeaux-dark);
+            font-weight: 500;
+        }
+        .banner-card-desc {
+            font-size: 0.78rem;
+            line-height: 2;
+            color: var(--text-soft);
+            margin: 0 0 14px;
+            letter-spacing: 0.05em;
+        }
+        .banner-card-cta {
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            color: var(--text-bordeaux);
+            opacity: 0.85;
+        }
+
+        /* === フッター === */
+        footer {
+            text-align: center;
+            padding: 80px 20px 60px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.4em;
+            opacity: 0.55;
+            color: var(--text-bordeaux);
+        }
+        footer .ornament-small {
+            margin-bottom: 24px;
+            color: var(--text-bordeaux-light);
+            font-size: 0.7rem;
+            letter-spacing: 0.6em;
+            opacity: 0.6;
+        }
+        .footer-legal-links {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            line-height: 2.4;
+            margin-bottom: 18px;
+            opacity: 0.55;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 16px;
+        }
+        .footer-legal-links a {
+            color: var(--text-bordeaux);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        .footer-legal-links a:hover { opacity: 0.85; }
+        .footer-legal-sep {
+            margin: 0 6px;
+            color: var(--text-bordeaux-light);
+            opacity: 0.6;
+        }
+        .footer-copy {
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.4em;
+            opacity: 0.7;
+        }
+        @media (max-width: 600px) {
+            .footer-legal-links { font-size: 0.62rem; line-height: 2.2; padding: 0 12px; }
+            .footer-legal-sep { margin: 0 4px; }
+        }
+
+        /* === モバイル対応 === */
+        @media (max-width: 640px) {
+            .nav-bar { padding: 18px 20px; }
+            header { padding: 110px 20px 48px; }
+            header h1 { letter-spacing: 0.1em; }
+            header .jp-title { letter-spacing: 0.35em; }
+            .intro-text { margin-bottom: 56px; font-size: 0.8rem; }
+            .container { padding: 0 16px 40px; }
+            .main-card { padding: 44px 24px; }
+            .res-score { font-size: 2.8rem; }
+            .res-advice { padding: 24px 20px; font-size: 0.88rem; }
+            .banner-section { margin: 48px auto 60px; padding: 0 16px; }
+            .banner-card { padding: 24px 22px; }
+        }
+
+        /* === 日本語の単語途中改行を防ぐ（禁則処理） === */
+        body,
+        .intro-text,
+        .fortune-about-title, .fortune-about-jp, .fortune-about-desc, .fortune-about-link,
+        .fortune-about-stat-label,
+        .fortune-offer-title, .fortune-offer-desc,
+        .fortune-bonus-title, .fortune-bonus-desc,
+        .fortune-line-btn, .fortune-offer-privacy,
+        .fortune-note-title, .fortune-note-sub, .fortune-note-headline, .fortune-note-tag, .fortune-note-more,
+        .fortune-voice-title, .fortune-voice-sub, .fortune-voice-quote, .fortune-voice-author,
+        .notice-body, .notice-sub,
+        .banner-title, .banner-sub, .banner-card-name, .banner-card-desc, .banner-card-cta,
+        .res-advice, .res-line-cta-lead, .res-line-btn,
+        header h1, header .jp-title {
+            word-break: keep-all;
+            line-break: strict;
+            overflow-wrap: break-word;
+        }
+
+        /* スクロール時のフェードイン */
+        .reveal {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           === ABOUT セクション (鑑定者紹介) ===
+           ============================================ */
+        .fortune-about {
+            max-width: 920px;
+            margin: 100px auto 0;
+            padding: 0 24px;
+        }
+        .fortune-about-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 56px;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.62);
+            border: 1px solid var(--line);
+            padding: 56px 56px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 40px rgba(139, 78, 78, 0.06);
+            position: relative;
+        }
+        .fortune-about-inner::before,
+        .fortune-about-inner::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border: 1px solid var(--text-bordeaux);
+            opacity: 0.35;
+        }
+        .fortune-about-inner::before { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+        .fortune-about-inner::after { bottom: 12px; right: 12px; border-left: none; border-top: none; }
+
+        .fortune-about-image {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            border: 1px solid var(--text-bordeaux-light);
+        }
+        .fortune-about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            display: block;
+            transition: transform 1.4s ease;
+        }
+        .fortune-about-inner:hover .fortune-about-image img { transform: scale(1.04); }
+
+        .fortune-about-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.4em;
+            color: var(--text-bordeaux);
+            opacity: 0.7;
+            margin-bottom: 18px;
+        }
+        .fortune-about-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.25rem;
+            color: var(--text-bordeaux-dark);
+            margin: 0 0 8px;
+            letter-spacing: 0.18em;
+            font-weight: 500;
+        }
+        .fortune-about-jp {
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            color: var(--text-bordeaux);
+            letter-spacing: 0.32em;
+            margin: 0 0 28px;
+            opacity: 0.85;
+        }
+        .fortune-about-stats {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 0 0 32px;
+            padding: 20px 0;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .fortune-about-stat {
+            flex: 1;
+            text-align: center;
+        }
+        .fortune-about-stat-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            color: var(--text-bordeaux-dark);
+            line-height: 1;
+            letter-spacing: 0.04em;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        .fortune-about-stat-num span {
+            font-size: 0.95rem;
+            margin-left: 2px;
+            color: var(--text-bordeaux);
+            opacity: 0.85;
+        }
+        .fortune-about-stat-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.28em;
+            color: var(--text-bordeaux);
+            opacity: 0.75;
+        }
+        .fortune-about-stat-divider {
+            width: 1px;
+            align-self: stretch;
+            background: var(--line);
+            min-height: 36px;
+        }
+        .fortune-about-desc {
+            font-size: 0.88rem;
+            line-height: 2.2;
+            color: var(--text-soft);
+            margin: 0 0 36px;
+            letter-spacing: 0.08em;
+        }
+        .fortune-about-desc strong {
+            font-weight: 500;
+            color: var(--text-bordeaux-dark);
+            letter-spacing: 0.1em;
+        }
+        .fortune-about-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 22px;
+        }
+        .fortune-about-link {
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.28em;
+            color: var(--text-bordeaux);
+            text-decoration: none;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--text-bordeaux-light);
+            transition: 0.3s ease;
+        }
+        .fortune-about-link:hover {
+            color: var(--text-bordeaux-dark);
+            border-bottom-color: var(--text-bordeaux-dark);
+        }
+        .fortune-about-line {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #06C755;
+            color: #fff;
+            font-size: 0.82rem;
+            letter-spacing: 0.12em;
+            padding: 14px 26px;
+            text-decoration: none;
+            font-family: inherit;
+            border: 1px solid #06C755;
+            border-radius: 999px;
+            transition: 0.35s ease;
+            box-shadow: 0 4px 14px rgba(6, 199, 85, 0.18);
+            font-weight: 500;
+        }
+        .fortune-about-line:hover {
+            background: #04a847;
+            border-color: #04a847;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(6, 199, 85, 0.30);
+        }
+        .fortune-about-line svg { flex-shrink: 0; }
+        @media (max-width: 760px) {
+            .fortune-about-actions { align-items: center; width: 100%; }
+            .fortune-about-line { width: 100%; max-width: 320px; justify-content: center; }
+            .fortune-about-link { text-align: center; }
+        }
+
+        /* ============================================
+           === VOICE セクション (相談者の声) ===
+           掲載許諾取得後にdisplay:noneを外して公開
+           ============================================ */
+        .fortune-voice {
+            max-width: 920px;
+            margin: 100px auto 0;
+            padding: 0 24px;
+            text-align: center;
+            /* 許諾取得後にこの行を消す → 公開 */
+            display: none;
+        }
+        .fortune-voice-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.4em;
+            color: var(--text-bordeaux);
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .fortune-voice-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.35rem;
+            color: var(--text-bordeaux-dark);
+            margin: 0 0 12px;
+            letter-spacing: 0.18em;
+            font-weight: 500;
+        }
+        .fortune-voice-sub {
+            font-size: 0.82rem;
+            color: var(--text-soft);
+            opacity: 0.75;
+            margin: 0 auto 40px;
+            line-height: 2;
+            letter-spacing: 0.08em;
+            max-width: 480px;
+        }
+        .fortune-voice-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: left;
+        }
+        .fortune-voice-card {
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid var(--line);
+            padding: 36px 28px 28px;
+            position: relative;
+        }
+        .fortune-voice-card::before {
+            content: """;
+            position: absolute;
+            top: 4px;
+            left: 16px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.6rem;
+            color: var(--text-bordeaux-light);
+            line-height: 1;
+            opacity: 0.6;
+        }
+        .fortune-voice-quote {
+            font-size: 0.86rem;
+            line-height: 2.1;
+            color: var(--text-soft);
+            letter-spacing: 0.05em;
+            margin: 0 0 20px;
+        }
+        .fortune-voice-author {
+            font-size: 0.72rem;
+            color: var(--text-bordeaux);
+            letter-spacing: 0.18em;
+            opacity: 0.75;
+            padding-top: 14px;
+            border-top: 1px solid var(--line-soft);
+        }
+
+        /* ============================================
+           === LINE OFFER セクション (5つの贈り物) ===
+           ============================================ */
+        .fortune-offer {
+            max-width: 920px;
+            margin: 100px auto 0;
+            padding: 80px 32px;
+            background:
+              radial-gradient(circle at 30% 20%, rgba(255, 235, 230, 0.5) 0%, transparent 60%),
+              linear-gradient(180deg, rgba(255,255,255,0.78) 0%, rgba(252, 240, 238, 0.78) 100%);
+            border: 1px solid var(--text-bordeaux-light);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .fortune-offer::before,
+        .fortune-offer::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border: 1px solid var(--text-bordeaux);
+            opacity: 0.4;
+        }
+        .fortune-offer::before { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+        .fortune-offer::after { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+
+        .fortune-offer-badge {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.45em;
+            color: var(--text-bordeaux);
+            opacity: 0.75;
+            margin-bottom: 18px;
+        }
+        .fortune-offer-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.45rem;
+            color: var(--text-bordeaux-dark);
+            margin: 0 0 14px;
+            letter-spacing: 0.18em;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        .fortune-offer-desc {
+            font-size: 0.85rem;
+            color: var(--text-soft);
+            opacity: 0.85;
+            margin: 0 auto 48px;
+            line-height: 2.2;
+            letter-spacing: 0.1em;
+            max-width: 520px;
+        }
+        .fortune-bonus-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin: 0 auto 48px;
+            max-width: 720px;
+            text-align: left;
+        }
+        .fortune-bonus {
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid var(--line);
+            padding: 26px 24px;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            position: relative;
+        }
+        .fortune-bonus-list.in-view .fortune-bonus { opacity: 1; transform: translateY(0); }
+        .fortune-bonus-list.in-view .fortune-bonus:nth-child(1) { transition-delay: 0.05s; }
+        .fortune-bonus-list.in-view .fortune-bonus:nth-child(2) { transition-delay: 0.13s; }
+        .fortune-bonus-list.in-view .fortune-bonus:nth-child(3) { transition-delay: 0.21s; }
+        .fortune-bonus-list.in-view .fortune-bonus:nth-child(4) { transition-delay: 0.29s; }
+        .fortune-bonus-list.in-view .fortune-bonus:nth-child(5) { transition-delay: 0.37s; }
+        .fortune-bonus-icon {
+            color: var(--text-bordeaux);
+            margin-bottom: 10px;
+            opacity: 0.85;
+        }
+        .fortune-bonus-num {
+            font-family: 'Cinzel', serif;
+            font-size: 0.62rem;
+            letter-spacing: 0.32em;
+            color: var(--text-bordeaux);
+            opacity: 0.6;
+            margin-bottom: 6px;
+        }
+        .fortune-bonus-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 0.95rem;
+            color: var(--text-bordeaux-dark);
+            margin: 0 0 8px;
+            letter-spacing: 0.08em;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .fortune-bonus-desc {
+            font-size: 0.75rem;
+            color: var(--text-soft);
+            line-height: 1.9;
+            letter-spacing: 0.05em;
+            opacity: 0.85;
+        }
+        .fortune-line-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #06C755;
+            color: #fff;
+            font-size: 0.9rem;
+            letter-spacing: 0.14em;
+            padding: 22px 48px;
+            text-decoration: none;
+            font-family: inherit;
+            border: 1px solid #06C755;
+            border-radius: 999px;
+            transition: 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(6, 199, 85, 0.22);
+        }
+        .fortune-line-btn::after {
+            content: "";
+            position: absolute;
+            inset: 5px;
+            border: 1px solid rgba(255,255,255,0.28);
+            border-radius: 999px;
+            transition: inset 0.3s;
+            pointer-events: none;
+        }
+        .fortune-line-btn:hover {
+            background: #04a847;
+            border-color: #04a847;
+            transform: translateY(-2px);
+            box-shadow: 0 14px 36px rgba(6, 199, 85, 0.35);
+        }
+        .fortune-offer-privacy {
+            font-size: 0.72rem;
+            color: var(--text-soft);
+            opacity: 0.7;
+            margin-top: 24px;
+            letter-spacing: 0.08em;
+            line-height: 2;
+        }
+        .fortune-offer-privacy a {
+            color: var(--text-bordeaux);
+            text-decoration: none;
+            border-bottom: 1px solid var(--line);
+            opacity: 0.85;
+        }
+
+        /* ============================================
+           === SISTER ROOMS (両方タブ + サムネ付き) ===
+           ============================================ */
+        .fortune-sister {
+            max-width: 720px;
+            margin: 100px auto 0;
+            padding: 0 24px;
+            text-align: center;
+        }
+        .fortune-sister-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.42em;
+            color: var(--text-bordeaux);
+            opacity: 0.75;
+            margin-bottom: 24px;
+        }
+
+        .fortune-tab {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 14px 22px 14px 14px;
+            margin-bottom: 14px;
+            background: rgba(255, 255, 255, 0.55);
+            border: 1px solid var(--text-bordeaux-light);
+            text-decoration: none;
+            color: var(--text-bordeaux-dark);
+            transition: 0.35s ease;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        .fortune-tab:hover {
+            background: var(--text-bordeaux);
+            color: #fff;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 26px rgba(123, 45, 63, 0.20);
+        }
+        .fortune-tab-thumb {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #f4ecea;
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.5) inset;
+        }
+        .fortune-tab-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        .fortune-tab-label {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            line-height: 1.4;
+            flex-grow: 1;
+            min-width: 0;
+        }
+        .fortune-tab-en {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.28em;
+            font-weight: 500;
+        }
+        .fortune-tab-jp {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.06em;
+            opacity: 0.78;
+            margin-top: 4px;
+        }
+        .fortune-tab-arrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            opacity: 0.65;
+            flex-shrink: 0;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .fortune-tab:hover .fortune-tab-arrow {
+            opacity: 1;
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 600px) {
+            .fortune-tab { padding: 12px 18px 12px 12px; gap: 14px; }
+            .fortune-tab-thumb { width: 54px; height: 54px; }
+            .fortune-tab-en { font-size: 0.62rem; letter-spacing: 0.22em; }
+            .fortune-tab-jp { font-size: 0.68rem; }
+        }
+        .fortune-sister-image {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }
+        .fortune-sister-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+            display: block;
+            transition: transform 1.4s ease;
+        }
+        .fortune-sister-inner:hover .fortune-sister-image img {
+            transform: scale(1.04);
+        }
+        .fortune-sister-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(139,78,78,0) 50%, rgba(74,40,66,0.35) 100%);
+            pointer-events: none;
+        }
+        .fortune-sister-tag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(255,255,255,0.88);
+            color: var(--text-bordeaux);
+            font-family: 'Cinzel', serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            padding: 6px 12px;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        .fortune-sister-body {
+            padding: 40px 32px 44px;
+        }
+        .fortune-sister-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: var(--text-bordeaux-dark);
+            letter-spacing: 0.22em;
+            margin: 0 0 8px;
+            font-weight: 400;
+        }
+        .fortune-sister-sub {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 0.85rem;
+            color: var(--text-bordeaux);
+            letter-spacing: 0.18em;
+            margin: 0 0 26px;
+            opacity: 0.85;
+            font-weight: 500;
+        }
+        .fortune-sister-desc {
+            font-size: 0.88rem;
+            line-height: 2.2;
+            color: var(--text-soft);
+            letter-spacing: 0.08em;
+            margin: 0 auto 28px;
+            max-width: 440px;
+        }
+        .fortune-sister-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            margin: 0 0 32px;
+            padding: 16px 0;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .fortune-sister-stats > div:not(.sep) {
+            flex: 0 1 auto;
+            text-align: center;
+            font-family: 'Shippori Mincho', serif;
+            font-size: 0.72rem;
+            color: var(--text-soft);
+            letter-spacing: 0.1em;
+            line-height: 1.6;
+        }
+        .fortune-sister-stats strong {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--text-bordeaux-dark);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 2px;
+        }
+        .fortune-sister-stats .sep {
+            width: 1px;
+            height: 26px;
+            background: var(--line);
+        }
+        .fortune-sister-cta {
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.28em;
+            color: var(--text-bordeaux);
+            text-decoration: none;
+            padding: 16px 40px;
+            border: 1px solid var(--text-bordeaux-light);
+            transition: 0.35s ease;
+        }
+        .fortune-sister-cta:hover {
+            background: var(--text-bordeaux);
+            color: #fff;
+            border-color: var(--text-bordeaux);
+            transform: translateY(-2px);
+        }
+        @media (max-width: 600px) {
+            .fortune-sister { margin-top: 72px; padding: 0 16px; }
+            .fortune-sister-image { aspect-ratio: 5 / 4; }
+            .fortune-sister-body { padding: 32px 22px 36px; }
+            .fortune-sister-title { font-size: 1.3rem; }
+            .fortune-sister-sub { font-size: 0.78rem; margin-bottom: 22px; }
+            .fortune-sister-stats { gap: 10px; padding: 14px 0; margin-bottom: 26px; }
+            .fortune-sister-stats > div:not(.sep) { font-size: 0.65rem; }
+            .fortune-sister-stats strong { font-size: 1.2rem; }
+            .fortune-sister-cta { padding: 14px 32px; font-size: 0.68rem; }
+        }
+
+        /* ============================================
+           === NOTE セクション (最新3記事) ===
+           ============================================ */
+        .fortune-note {
+            max-width: 920px;
+            margin: 100px auto 0;
+            padding: 0 24px;
+            text-align: center;
+        }
+        .fortune-note-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.4em;
+            color: var(--text-bordeaux);
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .fortune-note-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.35rem;
+            color: var(--text-bordeaux-dark);
+            margin: 0 0 12px;
+            letter-spacing: 0.18em;
+            font-weight: 500;
+        }
+        .fortune-note-sub {
+            font-size: 0.82rem;
+            color: var(--text-soft);
+            opacity: 0.75;
+            margin: 0 auto 40px;
+            line-height: 2;
+            letter-spacing: 0.08em;
+            max-width: 480px;
+        }
+        .fortune-note-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .fortune-note-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid var(--line);
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.35s ease;
+        }
+        .fortune-note-grid.in-view .fortune-note-card { opacity: 1; transform: translateY(0); }
+        .fortune-note-grid.in-view .fortune-note-card:nth-child(1) { transition-delay: 0.05s; }
+        .fortune-note-grid.in-view .fortune-note-card:nth-child(2) { transition-delay: 0.15s; }
+        .fortune-note-grid.in-view .fortune-note-card:nth-child(3) { transition-delay: 0.25s; }
+        .fortune-note-card:hover {
+            box-shadow: 0 12px 32px rgba(139, 78, 78, 0.10);
+            transform: translateY(-3px);
+        }
+        .fortune-note-thumb {
+            aspect-ratio: 4 / 3;
+            position: relative;
+            overflow: hidden;
+        }
+        .fortune-note-body {
+            padding: 22px 22px 26px;
+            text-align: left;
+        }
+        .fortune-note-tag {
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.32em;
+            color: var(--text-bordeaux);
+            opacity: 0.65;
+            margin-bottom: 10px;
+        }
+        .fortune-note-headline {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 0.92rem;
+            color: var(--text-bordeaux-dark);
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        .fortune-note-more {
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.28em;
+            color: var(--text-bordeaux);
+            text-decoration: none;
+            padding: 14px 36px;
+            border: 1px solid var(--text-bordeaux-light);
+            transition: 0.35s ease;
+        }
+        .fortune-note-more:hover {
+            background: var(--text-bordeaux);
+            color: #fff;
+            border-color: var(--text-bordeaux);
+        }
+
+        /* ============================================
+           === モバイル対応（新セクション） ===
+           ============================================ */
+        @media (max-width: 760px) {
+            .fortune-about { margin-top: 72px; padding: 0 16px; }
+            .fortune-about-inner {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                padding: 40px 28px;
+            }
+            .fortune-about-image { max-width: 280px; margin: 0 auto; }
+            .fortune-about-title { font-size: 1.15rem; }
+            .fortune-about-desc { font-size: 0.85rem; }
+
+            .fortune-offer { margin-top: 72px; padding: 56px 20px; }
+            .fortune-offer-title { font-size: 1.2rem; }
+            .fortune-bonus-list {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-bottom: 40px;
+            }
+            .fortune-bonus { padding: 22px 20px; }
+            .fortune-line-btn { padding: 20px 36px; font-size: 0.82rem; width: 100%; max-width: 320px; }
+
+            .fortune-note { margin-top: 72px; padding: 0 16px; }
+            .fortune-note-grid {
+                display: flex;
+                grid-template-columns: none;
+                gap: 14px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                padding: 0 4px 20px;
+                margin: 0 -16px 32px;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            .fortune-note-grid::-webkit-scrollbar { display: none; }
+            .fortune-note-card {
+                flex: 0 0 82%;
+                scroll-snap-align: start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="../Official/index.html" class="back-link">← BACK</a>
+        <span class="nav-title">FUSHIMI IMARI</span>
+    </nav>
+
+    <header class="reveal">
+        <h1>Imari Love Consulting</h1>
+        <span class="jp-title">いまり恋愛鑑定室</span>
+        <div class="ornament">
+            <span class="line"></span>
+            <span class="dot"></span>
+            <span class="line"></span>
+        </div>
+    </header>
+
+    <div class="intro-text reveal">
+        <p>
+            このページでは<br>
+            四柱推命を元に<br>
+            誕生日に刻まれた あなたの宿命を 紐解いています<br><br>
+
+            その日に生まれた魂が持つ<br>
+            恋のかたちを どうか 覗いてみてください<br><br>
+
+            気になるあの人との相性も<br>
+            よろしければ ご一緒に<br><br>
+
+            <strong>すべて 無料で</strong> 開いている 鑑定室です
+            <span class="en">— A free reading room by Imari. —</span>
+        </p>
+    </div>
+
+    <!-- ===== 四柱推命について（折りたたみ） ===== -->
+    <div class="fortune-explain-wrap reveal">
+      <details class="fortune-explain">
+        <summary>
+          <span class="fortune-explain-label">ABOUT</span>
+          四柱推命とは
+          <span class="fortune-explain-arrow">＋</span>
+        </summary>
+        <div class="fortune-explain-body">
+          <p>
+            四柱推命は<br>
+            中国・宋の時代に体系化された<br>
+            生年月日と時刻から 人の核を読み解く 暦学です<br><br>
+
+            生まれた日の天の気を<br>
+            <strong>十干（じっかん）と十二支</strong> に置きかえ<br>
+            ひと一人の 性質と運の流れを 浮かび上がらせます<br><br>
+
+            この鑑定室では<br>
+            あなたの生年月日から <strong>日干（にっかん）</strong> を読み<br>
+            恋愛における 核となる気質を ひとつ お見せしています<br><br>
+
+            相性鑑定では<br>
+            ふたりの 日干の組み合わせから<br>
+            魂の引力や 補い合いのかたちを 静かに 読み解いています
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <div class="container reveal">
+        <div class="main-card">
+            <div class="input-group">
+                <span class="label-en">Your Birthday</span>
+                <input type="date" id="my-birthday" value="1990-01-01">
+            </div>
+
+            <div class="input-group" style="margin-bottom: 56px;">
+                <span class="label-en">Partner's Birthday</span>
+                <input type="date" id="partner-birthday">
+            </div>
+
+            <div class="button-group">
+                <button class="btn" onclick="checkType()">
+                    <span>Reveal My Love Type</span>
+                    私の恋愛タイプは？
+                </button>
+                <button class="btn" onclick="checkAffinity()">
+                    <span>Check Compatibility</span>
+                    お相手との相性は？
+                </button>
+            </div>
+
+            <div id="result-area">
+                <div class="res-divider"></div>
+                <div class="label-en" id="res-label">Fortune Result</div>
+                <div class="res-score" id="res-kanshi">--</div>
+                <div class="res-advice" id="res-advice"></div>
+
+                <!-- 鑑定直後のLINE誘導CTA（離脱前にもう一押し）-->
+                <div class="res-line-cta">
+                    <p class="res-line-cta-lead">
+                        この結果を <strong>もう少し深く 読み解いてほしい</strong> 方へ<br>
+                        いまりの鑑定室を LINEで開いています
+                    </p>
+                    <a href="https://line.me/R/ti/p/@485xujjs" target="_blank" rel="noopener" class="res-line-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                        無料LINE登録で 5つの特典を受け取る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ABOUT: 鑑定者紹介 ===== -->
+    <section class="fortune-about reveal">
+      <div class="fortune-about-inner">
+        <div class="fortune-about-image">
+          <img src="images/portrait_about.jpg" alt="Fushimi Imari" loading="lazy">
+        </div>
+        <div class="fortune-about-content">
+          <div class="fortune-about-eyebrow">ABOUT THE READER</div>
+          <h2 class="fortune-about-title">この鑑定を 作った人</h2>
+          <p class="fortune-about-jp">FUSHIMI IMARI</p>
+
+          <div class="fortune-about-stats">
+            <div class="fortune-about-stat">
+              <div class="fortune-about-stat-num">1,000<span>+</span></div>
+              <div class="fortune-about-stat-label">鑑定実績</div>
+            </div>
+            <div class="fortune-about-stat-divider"></div>
+            <div class="fortune-about-stat">
+              <div class="fortune-about-stat-num">96<span>%</span></div>
+              <div class="fortune-about-stat-label">リピート率</div>
+            </div>
+            <div class="fortune-about-stat-divider"></div>
+            <div class="fortune-about-stat">
+              <div class="fortune-about-stat-num">四柱<span>推命</span></div>
+              <div class="fortune-about-stat-label">本格鑑定</div>
+            </div>
+          </div>
+
+          <p class="fortune-about-desc">
+            幼い頃から<br>
+            目に見えないものに 触れる時間が多く<br>
+            感受性を 大切に育てながら 過ごしてきました<br><br>
+
+            グラビアモデルとして 走り出してからも<br>
+            わたしは 自分の暮らしに<br>
+            占いを そっと 置き続けました<br><br>
+
+            鑑定士としての仕事を 始め<br>
+            ある日 ふと 気づきました<br><br>
+
+            届く相談の ほとんども<br>
+            わたし自身の 揺らぎも<br>
+            結局は 同じ場所から 始まっていたと<br><br>
+
+            恋のこと 仕事のこと<br>
+            結婚のこと 未来のこと<br>
+            誰もが 静かに 不安を 抱えている<br><br>
+
+            だから わたしは<br>
+            鑑定士として<br>
+            あなたの隣で 同じ温度で 読む人で ありたい<br><br>
+
+            今のあなたを 受け取って<br>
+            次の一歩を 一緒に 選んでいくために<br><br>
+
+            ここが あなたにとっての<br>
+            <strong>心の拠り所</strong> で ありますように
+          </p>
+
+          <div class="fortune-about-actions">
+            <a href="../Official/index.html#about" class="fortune-about-link">いまりについて もっと知る →</a>
+            <a href="https://line.me/R/ti/p/@485xujjs" target="_blank" rel="noopener" class="fortune-about-line">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+              鑑定室の続きは LINEで
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VOICE: 相談者の声（ローンチ後・掲載許諾取得後に復活） ===== -->
+    <!-- 復活手順：このコメントブロックを外し、VOICE_01-03 を実際の声に差し替え、CSS .fortune-voice の display:none を削除 -->
+    <!--
+    <section class="fortune-voice reveal">
+      <div class="fortune-voice-eyebrow">VOICES</div>
+      <h2 class="fortune-voice-title">相談者の方からの 声</h2>
+      <p class="fortune-voice-sub">
+        鑑定室に届いた お便りの一部を<br>
+        ご本人の許諾のもと 掲載しています
+      </p>
+      <div class="fortune-voice-list">
+        <div class="fortune-voice-card">
+          <p class="fortune-voice-quote">（VOICE_01 ここに実際の声）<br>※ 掲載許諾取得後に差替</p>
+          <div class="fortune-voice-author">— （仮名） / 30代</div>
+        </div>
+        <div class="fortune-voice-card">
+          <p class="fortune-voice-quote">（VOICE_02 ここに実際の声）<br>※ 掲載許諾取得後に差替</p>
+          <div class="fortune-voice-author">— （仮名） / 30代</div>
+        </div>
+        <div class="fortune-voice-card">
+          <p class="fortune-voice-quote">（VOICE_03 ここに実際の声）<br>※ 掲載許諾取得後に差替</p>
+          <div class="fortune-voice-author">— （仮名） / 30代</div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- ===== LINE OFFER: 5つの贈り物 ===== -->
+    <section class="fortune-offer reveal" id="offer">
+      <div class="fortune-offer-badge">INVITATION FROM IMARI</div>
+      <h2 class="fortune-offer-title">LINEで届く、5つの贈り物</h2>
+      <p class="fortune-offer-desc">恋のこと 肌のこと 運命のこと 装いのこと<br>いまりの30代を 5つの読みものに編みました</p>
+      <div class="fortune-bonus-list">
+        <div class="fortune-bonus">
+          <div class="fortune-bonus-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="20" r="7" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="26" cy="20" r="7" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.7"/></svg>
+          </div>
+          <div class="fortune-bonus-num">01</div>
+          <div class="fortune-bonus-title">30代の婚活ノート</div>
+          <div class="fortune-bonus-desc">鑑定室で 受け止めてきた<br>30代の 婚活のはなしを ひとつのノートに（A4 / 12P）</div>
+        </div>
+        <div class="fortune-bonus">
+          <div class="fortune-bonus-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="8" width="20" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/><line x1="14" y1="14" x2="26" y2="14" stroke="currentColor" stroke-width="1.2"/><line x1="14" y1="19" x2="26" y2="19" stroke="currentColor" stroke-width="1.2"/><line x1="14" y1="24" x2="22" y2="24" stroke="currentColor" stroke-width="1.2"/></svg>
+          </div>
+          <div class="fortune-bonus-num">02</div>
+          <div class="fortune-bonus-title">美容医療を 考える夜のメモ</div>
+          <div class="fortune-bonus-desc">迷っている気持ちを<br>一度 ひらいて 整えるための メモ（A4 / 8P）</div>
+        </div>
+        <div class="fortune-bonus">
+          <div class="fortune-bonus-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 8 L22 18 L32 20 L22 22 L20 32 L18 22 L8 20 L18 18 Z" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+          </div>
+          <div class="fortune-bonus-num">03</div>
+          <div class="fortune-bonus-title">いまり式・恋愛相性の読み</div>
+          <div class="fortune-bonus-desc">四柱推命と オラクルカード<br>あなたの今と兆しを ひと月ごとに そっと（A4 / 8P）</div>
+        </div>
+        <div class="fortune-bonus">
+          <div class="fortune-bonus-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M16 10 Q20 6 24 10 L26 32 L14 32 Z" fill="none" stroke="currentColor" stroke-width="1.4"/><line x1="20" y1="10" x2="20" y2="32" stroke="currentColor" stroke-width="1"/></svg>
+          </div>
+          <div class="fortune-bonus-num">04</div>
+          <div class="fortune-bonus-title">身長を 味方にする 私服のはなし</div>
+          <div class="fortune-bonus-desc">合わない丈に つかれた日に<br>身体を 知ることから始まる EDIT（A4 / 10P）</div>
+        </div>
+        <div class="fortune-bonus">
+          <div class="fortune-bonus-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M8 14 L20 8 L32 14 L32 28 L20 34 L8 28 Z" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="20" cy="21" r="3" fill="currentColor"/></svg>
+          </div>
+          <div class="fortune-bonus-num">05</div>
+          <div class="fortune-bonus-title">いまりの 夜の手紙</div>
+          <div class="fortune-bonus-desc">ひと月に ひとつ<br>LINE登録者だけに 届く ふたりだけの話</div>
+        </div>
+      </div>
+      <a href="https://line.me/R/ti/p/@485xujjs" target="_blank" rel="noopener" class="fortune-line-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="vertical-align:middle;margin-right:10px;"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>無料LINE登録で 5つの特典を受け取る →
+      </a>
+      <div class="fortune-offer-privacy">
+        無料でお届けする 手紙です<br>
+        受け取るのも、閉じるのも、あなたのペースで&nbsp;・&nbsp;<a href="../legal/privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </section>
+
+    <!-- ===== NOTE: 最新コラム ===== -->
+    <section class="fortune-note reveal">
+      <div class="fortune-note-eyebrow">LATEST READING</div>
+      <h2 class="fortune-note-title">夜のコラム</h2>
+      <p class="fortune-note-sub">
+        鑑定室で書いた 恋と運命のこと<br>
+        noteに そっと残しています
+      </p>
+      <div class="fortune-note-grid">
+        <a href="https://note.com/fushimi_imari_" target="_blank" rel="noopener" class="fortune-note-card">
+          <div class="fortune-note-thumb" style="background:linear-gradient(135deg,#7B2D3F,#4A2842);">
+            <svg style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:84px;height:84px;opacity:0.92;color:#fff;" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 18 Q22 22 26 38 Q30 50 44 44 Q34 42 32 32 Q30 22 40 18 Z" fill="currentColor"/><circle cx="46" cy="22" r="1.2" fill="currentColor"/><circle cx="50" cy="30" r="0.9" fill="currentColor"/></svg>
+          </div>
+          <div class="fortune-note-body">
+            <div class="fortune-note-tag">— FORTUNE</div>
+            <h3 class="fortune-note-headline">四柱推命で読む 今月の運命</h3>
+          </div>
+        </a>
+        <a href="https://note.com/fushimi_imari_" target="_blank" rel="noopener" class="fortune-note-card">
+          <div class="fortune-note-thumb" style="background:linear-gradient(135deg,#E8C9C0,#C9A6A0);">
+            <svg style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:84px;height:84px;opacity:0.92;color:#fff;" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M30 12 L34 26 L48 28 L36 36 L40 50 L30 42 L20 50 L24 36 L12 28 L26 26 Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <div class="fortune-note-body">
+            <div class="fortune-note-tag">— LOVE</div>
+            <h3 class="fortune-note-headline">30代の恋に効く 3つの読み</h3>
+          </div>
+        </a>
+        <a href="https://note.com/fushimi_imari_" target="_blank" rel="noopener" class="fortune-note-card">
+          <div class="fortune-note-thumb" style="background:linear-gradient(135deg,#9B7B6E,#6e3d3d);">
+            <svg style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:84px;height:84px;opacity:0.92;color:#fff;" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="14" y="16" width="32" height="22" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M14 18 L30 30 L46 18" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M40 38 L48 44 M20 38 L12 44" stroke="currentColor" stroke-width="1.4" opacity="0.7"/></svg>
+          </div>
+          <div class="fortune-note-body">
+            <div class="fortune-note-tag">— LETTER</div>
+            <h3 class="fortune-note-headline">鑑定室から 夜の手紙</h3>
+          </div>
+        </a>
+      </div>
+      <a href="https://note.com/fushimi_imari_" target="_blank" rel="noopener" class="fortune-note-more">もっと読む (note) →</a>
+    </section>
+
+    <!-- ===== SISTER ROOM: IMARI BEAUTY ===== -->
+    <section class="fortune-sister reveal">
+
+      <div class="fortune-sister-eyebrow">SISTER ROOMS</div>
+
+      <!-- BEAUTY タブ（メイン誘導・上） -->
+      <a href="../LP/index.html" class="fortune-tab">
+        <div class="fortune-tab-thumb">
+          <img src="images/sister_site_hero.jpg" alt="IMARI BEAUTY" loading="lazy">
+        </div>
+        <div class="fortune-tab-label">
+          <span class="fortune-tab-en">IMARI BEAUTY</span>
+          <span class="fortune-tab-jp">揺らぐ肌に 寄り添う 美容ノート</span>
+        </div>
+        <span class="fortune-tab-arrow">→</span>
+      </a>
+
+      <!-- MEN'S EDIT タブ（補助動線・下） -->
+      <a href="../Men/" class="fortune-tab">
+        <div class="fortune-tab-thumb">
+          <img src="images/men_card.jpg" alt="MEN'S EDIT" loading="lazy">
+        </div>
+        <div class="fortune-tab-label">
+          <span class="fortune-tab-en">FOR HIM — MEN'S EDIT</span>
+          <span class="fortune-tab-jp">男性のための、もうひとつの部屋</span>
+        </div>
+        <span class="fortune-tab-arrow">→</span>
+      </a>
+
+    </section>
+
+    <!-- ===== お知らせ：個人鑑定の新規受付停止 ===== -->
+    <section class="notice-section reveal">
+        <div class="notice-card">
+            <div class="notice-eyebrow">NOTICE</div>
+            <p class="notice-body">
+                富士美いまり個人による恋愛鑑定は、<br>
+                現在 <strong>新規受付を停止</strong> しております。
+            </p>
+            <p class="notice-sub">
+                ご相談ご希望の方は、下記のおすすめ電話占いをご利用ください。
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== もっと深く知りたい方へ ===== -->
+    <section class="banner-section reveal">
+        <div class="banner-divider"></div>
+        <div class="banner-eyebrow">FOR DEEPER READING</div>
+        <h2 class="banner-title">もっと深く、知りたい方へ</h2>
+        <p class="banner-sub">
+            四柱推命の鑑定だけでは見えない、<br>
+            あなたの今と未来を、本気で読み解いてもらえる場所。
+        </p>
+
+        <div class="banner-grid">
+
+            <!-- ココナラ電話占い（A8 提携中・実リンク） -->
+            <a href="https://px.a8.net/svt/ejp?a8mat=45BPUZ+BPIX2Q+2PEO+BYLJM" target="_blank" rel="nofollow noopener" class="banner-card">
+                <div class="banner-card-en">COCONALA / TELEPHONE</div>
+                <h3 class="banner-card-name">ココナラ電話占い</h3>
+                <p class="banner-card-desc">
+                    実力派占い師多数在籍、初回最大30分無料。<br>
+                    恋愛・結婚・仕事の悩みを、声でじっくり相談できる場所です。
+                </p>
+                <span class="banner-card-cta">VIEW →</span>
+            </a>
+            <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=45BPUZ+BPIX2Q+2PEO+BYLJM" alt="" style="position:absolute;">
+
+            <!-- ココナラ会員募集（A8 16-0713 承認済み・要A8リンク発行） -->
+            <!-- TODO: A8管理画面で(16-0713)のリンクを発行し、href と img tag を実リンクに差替 -->
+            <a href="https://coconala.com/" target="_blank" rel="nofollow noopener" class="banner-card">
+                <div class="banner-card-en">COCONALA / SKILL MARKET</div>
+                <h3 class="banner-card-name">ココナラ</h3>
+                <p class="banner-card-desc">
+                    占い・心理カウンセリング・人生相談など60万件以上のサービス。<br>
+                    気軽に話を聞いてほしい時に、自分のペースで相談相手を見つけられます。
+                </p>
+                <span class="banner-card-cta">VIEW →</span>
+            </a>
+
+        </div>
+
+        <p class="pr-note">※ 上記リンクには Ⓟ 広告 が含まれます</p>
+    </section>
+
+    <footer>
+        <div class="ornament-small">✦ &nbsp; ✦ &nbsp; ✦</div>
+        <nav class="footer-legal-links" aria-label="法務情報">
+          <a href="../legal/privacy-policy.html">プライバシーポリシー</a>
+          <span class="footer-legal-sep">・</span>
+          <a href="../legal/tokushoho.html">特定商取引法に基づく表記</a>
+          <span class="footer-legal-sep">・</span>
+          <a href="../legal/terms.html">利用規約</a>
+          <span class="footer-legal-sep">・</span>
+          <a href="../legal/advertising-disclosure.html">広告・PR表記について</a>
+          <span class="footer-legal-sep">・</span>
+          <a href="../legal/cosmetic-efficacy.html">化粧品の効能効果について</a>
+        </nav>
+        <div class="footer-copy">© FUSHIMI IMARI &nbsp; / &nbsp; TOKYO</div>
+    </footer>
+
+    <script>
+        // === リロード時に必ずページ最上部から表示する ===
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        window.addEventListener('load', () => {
+            if (!window.location.hash) window.scrollTo(0, 0);
+        });
+
+        // === 四柱推命ロジック ===
+        const jukkan = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"];
+        const junishi = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"];
+        const baseDate = new Date('1900-01-31');
+        function getKanshi(dateStr) {
+            const targetDate = new Date(dateStr);
+            if (isNaN(targetDate)) return null;
+            const diffDays = Math.floor((targetDate - baseDate) / (1000 * 60 * 60 * 24));
+            const kan = (diffDays + 0) % 10;
+            const shi = (diffDays + 4) % 12;
+            return { index: kan, name: jukkan[kan] + junishi[shi], stem: jukkan[kan] };
+        }
+        function checkType() {
+            const me = getKanshi(document.getElementById('my-birthday').value);
+            if (!me) return;
+            document.getElementById('res-label').innerText = "My Love Type";
+            document.getElementById('res-kanshi').innerText = me.name;
+            const types = {
+                "甲": "真っ直ぐな大樹タイプ。一途で誠実な恋をします。",
+                "乙": "癒やしの草花タイプ。守ってあげたいと思わせる魅力があります。",
+                "丙": "明るい太陽タイプ。情熱的で華やかな恋を好みます。",
+                "丁": "静かに燃える灯火タイプ。相手の心に深く入り込む色香があります。",
+                "戊": "どっしりした山岳タイプ。大きな包容力で相手を包み込みます。",
+                "己": "愛情深い大地タイプ。家庭的で尽くすことに喜びを感じます。",
+                "庚": "決断力ある刀剣タイプ。ドラマチックに恋を掴み取ります。",
+                "辛": "気高い宝石タイプ。特別な存在として扱われることで輝きます。",
+                "壬": "自由な海タイプ。広い器ですべてを包み込みます。",
+                "癸": "純粋な雨タイプ。献身的に相手を支えるのが上手です。"
+            };
+            document.getElementById('res-advice').innerText = types[me.stem];
+            show();
+        }
+        function checkAffinity() {
+            const me = getKanshi(document.getElementById('my-birthday').value);
+            const partner = getKanshi(document.getElementById('partner-birthday').value);
+            if (!me || !partner) return alert("ふたりの誕生日を、お聞かせください。");
+            document.getElementById('res-label').innerText = "Affinity Score";
+            const mS = me.index; const pS = partner.index;
+            const myG = Math.floor(mS / 2); const pG = Math.floor(pS / 2);
+            let score = 0; let advice = "";
+            const isKango = (Math.abs(mS - pS) === 5);
+
+            if (isKango) {
+                score = 96 + (Math.floor(Math.random() * 3));
+                advice = "【この上ない相性】\n魂レベルで惹かれ合うふたり。お互いが包容力を示し合うことで、さらに深い愛へと昇華します。";
+            } else if ((myG + 1) % 5 === pG) {
+                score = 82 + (Math.floor(Math.random() * 5));
+                advice = "【心地よい支え合い】\n細やかな気遣いがふたりの土台。お互いを自信を持って輝かせ合える、最高のバランスです。";
+            } else if ((pG + 1) % 5 === myG) {
+                score = 85 + (Math.floor(Math.random() * 4));
+                advice = "【愛される悦び】\n一方がリードし、もう一方が素直に甘える。愛されている実感を強く持てる関係です。";
+            } else if (myG === pG) {
+                score = 75 + (Math.floor(Math.random() * 6));
+                advice = "【自立したパートナーシップ】\n価値観が似たふたり。時にはどちらかから歩み寄る努力が、仲を深める鍵になります。";
+            } else {
+                score = 62 + (Math.floor(Math.random() * 8));
+                advice = "【努力が必要な刺激的相性】\n正反対だからこそ惹かれます。どちらかがどれだけ寄り添えるかがポイントになります。";
+            }
+            document.getElementById('res-kanshi').innerText = score + "%";
+            document.getElementById('res-advice').innerText = advice;
+            show();
+        }
+        function show() {
+            document.getElementById('result-area').style.display = 'block';
+            document.getElementById('result-area').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // === ユーザー指定の background.png があれば優先表示 ===
+        (function checkBg() {
+            const img = new Image();
+            img.onload = () => document.body.classList.add('has-bg');
+            img.onerror = () => {}; // SVGのまま
+            img.src = 'background.png';
+        })();
+
+        // === スクロール時のフェードイン ===
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // === stagger用（カード列の順次表示） ===
+        const staggerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('in-view');
+                    staggerObserver.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
+        document.querySelectorAll('.fortune-bonus-list, .fortune-note-grid').forEach(el => staggerObserver.observe(el));
+    </script>
+</body>
+</html>

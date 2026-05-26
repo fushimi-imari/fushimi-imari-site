@@ -1,0 +1,113 @@
+/* ===== 法務ページ共通スタイル ===== */
+:root {
+  --color-cream: #FDF7F4;
+  --color-beige: #F2DCD5;
+  --color-brown: #3A2D1C;
+  --color-bordeaux: #7B2D3F;
+  --color-divider: #E8DFD7;
+  --color-sub: #9B7B6E;
+  --font-en: 'Cormorant Garamond', serif;
+  --font-jp: 'Noto Serif JP', serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font-jp);
+  background: var(--color-cream);
+  color: var(--color-brown);
+  line-height: 1.9;
+  font-size: 15px;
+}
+.legal-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 28px 80px;
+}
+.legal-back {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--color-bordeaux);
+  margin-bottom: 28px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .25s;
+}
+.legal-back:hover { border-bottom-color: var(--color-bordeaux); }
+.legal-title {
+  font-family: var(--font-en);
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: var(--color-bordeaux);
+  margin-bottom: 8px;
+}
+.legal-title-jp {
+  font-family: var(--font-jp);
+  font-size: 18px;
+  color: var(--color-sub);
+  margin-bottom: 32px;
+  letter-spacing: 0.1em;
+}
+.legal-meta {
+  font-size: 12px;
+  color: var(--color-sub);
+  border-bottom: 1px solid var(--color-divider);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+h2 {
+  font-family: var(--font-jp);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 36px 0 14px;
+  padding-left: 12px;
+  border-left: 3px solid var(--color-bordeaux);
+}
+p { margin-bottom: 14px; }
+ul, ol { margin-left: 20px; margin-bottom: 16px; }
+li { margin-bottom: 6px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid var(--color-divider);
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+th {
+  background: var(--color-beige);
+  font-weight: 600;
+  white-space: nowrap;
+  width: 32%;
+}
+.legal-footer {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-divider);
+  font-size: 11px;
+  color: var(--color-sub);
+  text-align: center;
+}
+.placeholder {
+  background: #fff8e1;
+  border-left: 3px solid #f59e0b;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #92400e;
+  margin: 12px 0;
+  border-radius: 4px;
+}
+@media (max-width: 600px) {
+  .legal-wrapper { padding: 40px 20px 60px; }
+  .legal-title { font-size: 28px; }
+  th { width: auto; display: block; padding: 8px 12px; }
+  td { display: block; padding: 8px 12px; border-top: none; }
+  table tr:not(:last-child) { border-bottom: 1px solid var(--color-divider); }
+}
