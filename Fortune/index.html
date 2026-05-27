@@ -185,6 +185,25 @@
             color: var(--text-bordeaux-dark);
             letter-spacing: 0.12em;
         }
+        .intro-cta {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 14px 36px;
+            font-family: 'Shippori Mincho', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.18em;
+            color: var(--text-bordeaux-dark);
+            border: 1px solid var(--text-bordeaux-dark);
+            border-radius: 999px;
+            text-decoration: none;
+            background: rgba(255,255,255,0.5);
+            transition: all 0.3s ease;
+        }
+        .intro-cta:hover {
+            background: var(--text-bordeaux-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
 
         /* === 四柱推命についての折りたたみ === */
         .fortune-explain-wrap {
@@ -1478,7 +1497,7 @@
         <span class="nav-title">FUSHIMI IMARI</span>
     </nav>
 
-    <header class="reveal">
+    <header>
         <h1>Imari Love Consulting</h1>
         <span class="jp-title">いまり恋愛鑑定室</span>
         <div class="ornament">
@@ -1503,6 +1522,7 @@
             <strong>すべて 無料で</strong> 開いている 鑑定室です
             <span class="en">— A free reading room by Imari. —</span>
         </p>
+        <a href="#fortune-form" class="intro-cta">鑑定をはじめる ↓</a>
     </div>
 
     <!-- ===== 四柱推命について（折りたたみ） ===== -->
@@ -1535,7 +1555,7 @@
       </details>
     </div>
 
-    <div class="container reveal">
+    <div class="container reveal" id="fortune-form">
         <div class="main-card">
             <div class="input-group">
                 <span class="label-en">Your Birthday</span>
