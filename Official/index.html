@@ -736,35 +736,122 @@ a:hover { opacity: 0.7; }
   margin-bottom: 4px;
   letter-spacing: 1px;
 }
-/* MEN'S HUB — featured-site の派生（より静かな陰影、男性誘導用） */
-.featured-site.featured-site-men {
-  background: linear-gradient(180deg, #F2EBE0 0%, #E8DDD0 100%);
-  padding: 80px 32px;
+/* MEN'S MINI BANNER — BEAUTY HUBの直下に並べる小型導線 */
+.men-mini-banner {
+  background: linear-gradient(180deg, #E8DDD0 0%, #DCCFC0 100%);
+  padding: 36px 32px;
 }
-.featured-site-men .featured-site-image {
-  aspect-ratio: 4/5;
-  box-shadow: 0 16px 40px rgba(58,45,28,0.22);
+.men-mini-link {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  max-width: 980px;
+  margin: 0 auto;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.3s;
 }
-.featured-site-men .featured-site-tag {
+.men-mini-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+.men-mini-image {
+  position: relative;
+  flex-shrink: 0;
+  width: 120px;
+  height: 150px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(58,45,28,0.18);
+}
+.men-mini-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.men-mini-tag {
+  position: absolute;
+  top: 8px; left: 8px;
   background: #3A2D1C;
+  color: #fff;
+  font-family: var(--font-en);
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+.men-mini-content {
+  flex: 1;
+  display: flex; flex-direction: column;
+  gap: 6px;
+}
+.men-mini-eyebrow {
+  font-family: var(--font-en);
+  font-size: 10px;
   letter-spacing: 3px;
-}
-.featured-site-men .featured-site-title {
-  font-size: clamp(32px, 4vw, 52px);
-  color: #3A2D1C;
-}
-.featured-site-men .featured-site-script {
   color: var(--color-bordeaux);
-  font-size: 34px;
+  font-weight: 600;
 }
-.featured-site-men .featured-site-stats strong {
+.men-mini-title {
+  font-family: var(--font-en);
+  font-size: 22px;
+  letter-spacing: 3px;
   color: #3A2D1C;
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
 }
-.featured-site-men .btn-primary {
-  background: #3A2D1C;
+.men-mini-script {
+  font-family: var(--font-script);
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: var(--color-sub);
+  font-weight: 400;
 }
-.featured-site-men .btn-primary:hover {
-  background: #5C4A33;
+.men-mini-desc {
+  font-family: var(--font-jp);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 4px 0 6px;
+}
+.men-mini-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.men-mini-stat {
+  font-family: var(--font-en);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #3A2D1C;
+  padding: 4px 10px;
+  border: 1px solid rgba(58,45,28,0.25);
+  border-radius: 999px;
+}
+.men-mini-stat strong { font-weight: 600; }
+.men-mini-cta {
+  font-family: var(--font-jp);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--color-bordeaux);
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+.men-mini-link:hover .men-mini-cta { transform: translateX(4px); }
+@media (max-width: 700px) {
+  .men-mini-banner { padding: 28px 20px; }
+  .men-mini-link { gap: 18px; }
+  .men-mini-image { width: 88px; height: 110px; }
+  .men-mini-title { font-size: 18px; gap: 8px; }
+  .men-mini-script { font-size: 15px; }
+  .men-mini-desc { font-size: 12px; }
 }
 
 @media (max-width: 900px) {
@@ -1431,7 +1518,6 @@ footer {
     </div>
     <div class="hero-fans-note">
       <a href="https://lit.link/fushimi_imari_" target="_blank" rel="noopener">— 撮影会・ご予約はこちら ↗</a>
-      <a href="../Men/" style="display:block;margin-top:6px;">— 男性のあなたへ ／ MEN'S EDIT ↗</a>
     </div>
   </div>
 </section>
@@ -1668,30 +1754,23 @@ footer {
   </div>
 </section>
 
-<!-- ===== FEATURED SITE: IMARI MEN ===== -->
-<section class="featured-site featured-site-men" id="men-site">
-  <div class="featured-site-inner">
-    <div class="featured-site-image" style="background:#3A2D1C url('images/men_card.jpg') center/cover no-repeat;">
-      <div class="featured-site-tag">MEN'S SITE</div>
+<!-- ===== MEN'S MINI BANNER (compact) ===== -->
+<section class="men-mini-banner" id="men-site">
+  <a href="../Men/" class="men-mini-link">
+    <div class="men-mini-image">
+      <img src="images/men_card.jpg" alt="IMARI MEN" loading="lazy">
+      <div class="men-mini-tag">MEN'S</div>
     </div>
-    <div class="featured-site-content">
-      <div class="section-eyebrow">— MEN'S HUB —</div>
-      <h2 class="featured-site-title">IMARI MEN</h2>
-      <p class="featured-site-script">MEN'S EDIT</p>
-      <p class="featured-site-desc">
-        忙しい日々のなかに 静かに整える時間を<br><br>
-        頭皮から肌 香り 暮らしの心地まで<br>
-        <strong>男性のあなたのための一品ずつ</strong>を 編みました<br><br>
-        誰かのため ではなく あなた自身のために<br>
-        Imari の "MEN'S EDIT" を ここから
-      </p>
-      <div class="featured-site-stats">
-        <div><strong>5</strong>カテゴリ</div>
-        <div><strong>Coming Soon</strong>拡大中</div>
+    <div class="men-mini-content">
+      <div class="men-mini-eyebrow">— MEN'S HUB —</div>
+      <h3 class="men-mini-title">IMARI MEN <span class="men-mini-script">MEN'S EDIT</span></h3>
+      <p class="men-mini-desc">男性のあなたのために 静かに編んだ贈り物を ここから</p>
+      <div class="men-mini-meta">
+        <span class="men-mini-stat"><strong>Coming Soon</strong></span>
+        <span class="men-mini-cta">男性のあなたへ 贈り物を見に行く →</span>
       </div>
-      <a href="../Men/" class="btn-primary">男性のあなたへ 覗きに行く →</a>
     </div>
-  </div>
+  </a>
 </section>
 
 <!-- ===== LATEST CONTENT ===== -->
