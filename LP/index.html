@@ -1203,6 +1203,23 @@ body.menu-open { overflow: hidden; }
 /* Sticky CTA 分のbody余白 */
 body { padding-bottom: 100px; }
 </style>
+<!-- ===== imari_track: クリック計測（GA4イベント / 既存リンク無改変） ===== -->
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a[href]');
+  if(!a || typeof gtag!=='function') return;
+  var h = a.href || '';
+  var txt = (a.innerText||'').trim().slice(0,60);
+  if(/px\.a8\.net|valuecommerce|room\.rakuten|amzn\.|amazon\./.test(h)){
+    var net = /room\.rakuten/.test(h)?'rakuten' : /valuecommerce/.test(h)?'valuecommerce' : /px\.a8\.net/.test(h)?'a8' : (/amazon|amzn/.test(h)?'amazon':'other');
+    gtag('event','affiliate_click',{affiliate_network:net, link_url:h, link_text:txt, page_path:location.pathname});
+  } else if(/line\.me|lin\.ee/.test(h)){
+    gtag('event','line_register',{link_url:h, page_path:location.pathname});
+  } else if(/lit\.link/.test(h)){
+    gtag('event','litlink_click',{link_url:h, page_path:location.pathname});
+  }
+});
+</script>
 </head>
 <body>
 
