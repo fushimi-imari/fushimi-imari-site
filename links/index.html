@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>富士美いまり | Fushimi Imari — Links</title>
+<meta name="description" content="富士美いまり / Fushimi Imari のリンク集。グラビアモデル × 恋愛鑑定士。SNS・Beauty Edits・ご予約・お仕事のご依頼はこちらから。">
+<meta property="og:title" content="富士美いまり | Fushimi Imari — Links">
+<meta property="og:description" content="美しさは ひとりでは 育たない。富士美いまりの すべての入口を ここに。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://fushimi-imari-site.vercel.app/Official/images/og-official.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FDF7F4; --beige:#F2DCD5; --beige-deep:#E8C9C0;
+    --brown:#3A2D1C; --bordeaux:#7B2D3F; --divider:#E8DFD7;
+    --sub:#9B7B6E; --text:#3A2D1C;
+    --jp:'Noto Serif JP',serif; --en:'Cormorant Garamond',serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:var(--jp); color:var(--text);
+    background:linear-gradient(180deg,#FDF7F4 0%,#F6E9E3 100%);
+    min-height:100vh; line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:520px; margin:0 auto; padding:54px 22px 64px;}
+
+  /* ---- profile ---- */
+  .profile{text-align:center; margin-bottom:34px;}
+  .avatar{
+    width:118px; height:118px; border-radius:50%; object-fit:cover;
+    border:2px solid #fff; box-shadow:0 6px 22px rgba(123,45,63,.16);
+    margin:0 auto 18px; display:block;
+  }
+  .name{font-family:var(--en); font-size:1.05rem; letter-spacing:.18em; color:var(--bordeaux); margin-bottom:4px;}
+  .name-jp{font-size:1.5rem; font-weight:500; letter-spacing:.06em; color:var(--brown); margin-bottom:14px;}
+  .tagline{font-size:.92rem; color:var(--sub); letter-spacing:.08em; margin-bottom:16px;}
+  .tagline::before,.tagline::after{content:"—"; color:var(--beige-deep); margin:0 8px;}
+  .bio{font-size:.82rem; color:var(--text); opacity:.85;}
+  .spec{font-size:.72rem; color:var(--sub); letter-spacing:.04em; margin-top:10px;}
+
+  /* ---- section label ---- */
+  .label{
+    font-family:var(--en); font-size:.72rem; letter-spacing:.28em;
+    color:var(--sub); text-align:center; margin:30px 0 14px;
+  }
+
+  /* ---- link buttons ---- */
+  .links{display:flex; flex-direction:column; gap:11px;}
+  a.link{
+    display:flex; align-items:center; gap:14px;
+    background:#fff; border:1px solid var(--divider); border-radius:16px;
+    padding:15px 18px; text-decoration:none; color:var(--text);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    box-shadow:0 2px 10px rgba(58,45,28,.04);
+  }
+  a.link:hover{transform:translateY(-2px); box-shadow:0 8px 20px rgba(123,45,63,.12); border-color:var(--beige-deep);}
+  .link .eyebrow{font-family:var(--en); font-size:.62rem; letter-spacing:.22em; color:var(--bordeaux); text-transform:uppercase;}
+  .link .title{font-size:.95rem; font-weight:500; color:var(--brown); letter-spacing:.03em;}
+  .link .desc{font-size:.72rem; color:var(--sub); margin-top:2px;}
+  .link .body{flex:1; min-width:0;}
+  .link .arrow{color:var(--beige-deep); font-size:1.1rem; flex-shrink:0;}
+  a.link.accent{background:var(--bordeaux); border-color:var(--bordeaux);}
+  a.link.accent .eyebrow{color:#E8C9C0;}
+  a.link.accent .title{color:#fff;}
+  a.link.accent .desc{color:#F2DCD5; opacity:.85;}
+  a.link.accent .arrow{color:#E8C9C0;}
+
+  /* ---- accordion (guide) ---- */
+  details.guide{
+    background:#fff; border:1px solid var(--divider); border-radius:16px;
+    padding:4px 18px; margin-top:11px; box-shadow:0 2px 10px rgba(58,45,28,.04);
+  }
+  details.guide summary{
+    list-style:none; cursor:pointer; padding:13px 0;
+    display:flex; align-items:center; gap:14px;
+  }
+  details.guide summary::-webkit-details-marker{display:none;}
+  details.guide summary .eyebrow{font-family:var(--en); font-size:.62rem; letter-spacing:.22em; color:var(--bordeaux); text-transform:uppercase;}
+  details.guide summary .title{font-size:.95rem; font-weight:500; color:var(--brown);}
+  details.guide summary .plus{margin-left:auto; color:var(--bordeaux); font-size:1.2rem; transition:transform .2s;}
+  details.guide[open] summary .plus{transform:rotate(45deg);}
+  .guide-body{font-size:.8rem; color:var(--text); padding:6px 0 18px; border-top:1px solid var(--divider); margin-top:4px;}
+  .guide-body h4{font-size:.82rem; color:var(--bordeaux); margin:16px 0 6px; letter-spacing:.04em;}
+  .guide-body p{margin:6px 0;}
+  .guide-body ul{margin:6px 0 6px 1.1em;}
+  .guide-body li{margin:4px 0;}
+  .guide-body .warn{color:var(--bordeaux); font-weight:500;}
+
+  /* ---- footer ---- */
+  .foot{text-align:center; margin-top:40px; color:var(--sub); font-size:.72rem; letter-spacing:.06em;}
+  .foot .tl{font-family:var(--jp); margin-bottom:10px; color:var(--brown); opacity:.7;}
+  .foot a{color:var(--sub);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===== PROFILE ===== -->
+  <div class="profile">
+    <img class="avatar" src="images/profile.jpg" alt="富士美いまり">
+    <div class="name">FUSHIMI IMARI</div>
+    <div class="name-jp">富士美いまり</div>
+    <div class="tagline">整えるたび、心まで ほどけていく</div>
+    <div class="bio">
+      グラビアモデル × 恋愛鑑定士<br>
+      30代の揺らぐ肌の味方を ひとつずつ
+    </div>
+    <div class="spec">169cm ／ 骨格ストレート ／ ブルベ夏 ／ 顔タイプエレガント ／ 恋愛鑑定リピート率 96%</div>
+  </div>
+
+  <!-- ===== SNS ===== -->
+  <div class="label">FOLLOW</div>
+  <div class="links">
+    <a class="link" href="https://www.instagram.com/fushimi_imari_/" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">Instagram</div><div class="title">Instagram</div><div class="desc">ストーリーで 不定期の質問コーナー</div></div>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://x.com/fushimi_imari_" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">X — Main</div><div class="title">X（メイン）</div><div class="desc">毎日更新中</div></div>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://x.com/imari_info" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">X — Info</div><div class="title">@imari_info</div><div class="desc">告知・お写真の送付はこちら</div></div>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://www.tiktok.com/@fushimi_imari_" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">TikTok</div><div class="title">TikTok</div><div class="desc">ダンスから PR まで</div></div>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://note.com/fushimi_imari_" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">note</div><div class="title">はぴモテ研究所</div><div class="desc">占い・開運・美容の読みもの</div></div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <!-- ===== IMARI WORLD (sub-sites) ===== -->
+  <div class="label">IMARI WORLD</div>
+  <div class="links">
+    <a class="link" href="../LP/" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">Imari Beauty</div><div class="title">ビューティー</div><div class="desc">30代の肌の味方を ひとつずつ（スキンケア・瞳・美容家電）</div></div>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link" href="../Men/" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">Men's Edit</div><div class="title">メンズビューティー</div><div class="desc">男性のあなたへ 静かに編んだ贈り物</div></div>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link" href="../Fortune/" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">Fortune</div><div class="title">占い</div><div class="desc">恋と運命を読む — 四柱推命とオラクルカード</div></div>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://room.rakuten.co.jp/fushimi_imari_/items" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">Rakuten ROOM</div><div class="title">楽天ROOM</div><div class="desc">日々の選択を 集めた場所</div></div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <!-- ===== CONTACT / BOOKING ===== -->
+  <div class="label">CONTACT</div>
+  <div class="links">
+    <a class="link accent" href="https://line.me/R/ti/p/@485xujjs" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">LINE</div><div class="title">LINE登録で 5つの贈り物</div><div class="desc">恋・肌・運命・装いの読みもの</div></div>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://timetr.ee/p/fushimi_imari_rabo" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">Booking</div><div class="title">撮影会・ご予約</div><div class="desc">TimeTree から 日程を確認</div></div>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link" href="mailto:fushimiimari@gmail.com?subject=お仕事のご依頼" rel="noopener">
+      <div class="body"><div class="eyebrow">Contact</div><div class="title">お仕事のご依頼</div><div class="desc">PR・タイアップ・取材・鑑定のご相談</div></div>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link" href="../assets/IMARI_MediaKit.pdf" target="_blank" rel="noopener">
+      <div class="body"><div class="eyebrow">For Press</div><div class="title">メディアキット</div><div class="desc">プロフィール・実績（PDF）</div></div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <!-- ===== GUIDE (accordion) ===== -->
+  <div class="label">FOR FANS</div>
+  <details class="guide">
+    <summary>
+      <div><div class="eyebrow">Guide</div><div class="title">掲載確認＆差し入れガイド</div></div>
+      <span class="plus">＋</span>
+    </summary>
+    <div class="guide-body">
+      <h4>お写真送付・掲載確認について</h4>
+      <p><a href="https://x.com/imari_info" target="_blank" rel="noopener">@imari_info</a> のDM宛に送付をお願いします。</p>
+      <p class="warn">⚠️ フォローされていない方からのDMは確認が漏れてしまうため、必ずフォローの上お送りください。</p>
+
+      <h4>送付時に必ず記載してほしいこと</h4>
+      <ul>
+        <li>「掲載確認」か「画像提供」かの明記</li>
+        <li>掲載予定のSNSアカウントID（X / Instagram 等）</li>
+        <li>1衣装につき20枚まで／レタッチ済みの状態で送付をお願いします</li>
+      </ul>
+      <p class="warn">⚠️ 不足がある場合はご返信致しかねます。いまりの時間を大切にしてくださいね。</p>
+
+      <h4>「掲載NG」でも写真は送ってほしいです</h4>
+      <p>SNSに載せないお写真でも、保存用や今後の活動の資料として嬉しいです。「画像提供」として送ってくださいね。</p>
+
+      <h4>掲載写真に必要なレタッチ</h4>
+      <p><strong>消してほしいもの：</strong>ほうれい線、目の下のクマ（徹底的に）、肌荒れ・赤み。</p>
+      <p class="warn">⚠️ 重要：ニップレスやアンダーの透け・はみ出しは掲載NG。消せない場合はボツです。</p>
+      <p><strong>NGなレタッチ：</strong>やりすぎ美肌加工（鼻が消える・境界線がぼやける）、顔や身体の形を著しく変えること（大切な曲線美を壊さないでね）、不自然な色味（白黒や極端なフィルター。自然なカラーが理想）。</p>
+
+      <h4>掲載NGのお写真</h4>
+      <ul>
+        <li>半目、口ポカン、ピントが合っていないもの</li>
+        <li class="warn">前名義（旧名）の写真およびチェキは一切掲載禁止です</li>
+        <li>あおり構図、過度なローアングル、際どすぎるもの（エロさより「美しさ」重視）</li>
+      </ul>
+
+      <h4>飲食物の差し入れについて</h4>
+      <p>現場で直接お渡しの場合、次のものは受取不可です：① ナマモノ（食中毒リスク）／② 手作り・開封済み・アルコール。</p>
+      <p><strong>喜ぶスマートな贈り物：</strong>Amazonギフト券、商品券、美容ドリンク。「いつもよりチェキを多く撮る」という愛が一番嬉しいです。</p>
+    </div>
+  </details>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="foot">
+    <div class="tl">美しさは ひとりでは 育たない</div>
+    © 2026 Fushimi Imari ・ <a href="../legal/privacy-policy.html">プライバシーポリシー</a>
+  </div>
+
+</div>
+</body>
+</html>
