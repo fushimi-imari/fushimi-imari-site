@@ -331,6 +331,27 @@
             transition: border-color 0.3s;
         }
         input[type="date"]:focus { border-color: var(--text-bordeaux-dark); }
+        .bday-row { display: flex; gap: 10px; justify-content: center; max-width: 300px; margin: 0 auto; }
+        .bday-select {
+            flex: 1;
+            min-width: 0;
+            border: none;
+            border-bottom: 1px solid var(--text-bordeaux-light);
+            padding: 12px 4px;
+            font-size: 1.05rem;
+            text-align: center;
+            text-align-last: center;
+            outline: none;
+            background: transparent;
+            color: var(--text-bordeaux-dark);
+            font-family: inherit;
+            letter-spacing: 0.04em;
+            border-radius: 0;
+            -webkit-appearance: none;
+            appearance: none;
+            transition: border-color 0.3s;
+        }
+        .bday-select:focus { border-color: var(--text-bordeaux-dark); }
 
         .button-group {
             display: flex;
@@ -1576,12 +1597,20 @@ document.addEventListener('click', function(e){
         <div class="main-card">
             <div class="input-group">
                 <span class="label-en">Your Birthday</span>
-                <input type="date" id="my-birthday" value="1990-01-01">
+                <div class="bday-row">
+                    <select class="bday-select" id="my-year" aria-label="あなたの誕生年"></select>
+                    <select class="bday-select" id="my-month" aria-label="あなたの誕生月"></select>
+                    <select class="bday-select" id="my-day" aria-label="あなたの誕生日"></select>
+                </div>
             </div>
 
             <div class="input-group" style="margin-bottom: 56px;">
                 <span class="label-en">Partner's Birthday</span>
-                <input type="date" id="partner-birthday">
+                <div class="bday-row">
+                    <select class="bday-select" id="partner-year" aria-label="お相手の誕生年"></select>
+                    <select class="bday-select" id="partner-month" aria-label="お相手の誕生月"></select>
+                    <select class="bday-select" id="partner-day" aria-label="お相手の誕生日"></select>
+                </div>
             </div>
 
             <div class="button-group">
@@ -1934,6 +1963,22 @@ document.addEventListener('click', function(e){
         const jukkan = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"];
         const junishi = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"];
         const baseDate = new Date('1900-01-31');
+        function fillBdaySelects() {
+            const yNow = new Date().getFullYear();
+            ['my','partner'].forEach(function(p){
+                const y=document.getElementById(p+'-year'), m=document.getElementById(p+'-month'), d=document.getElementById(p+'-day');
+                if(!y||!m||!d) return;
+                let yo='<option value="">年</option>'; for(let i=yNow;i>=1940;i--) yo+='<option value="'+i+'">'+i+'</option>'; y.innerHTML=yo;
+                let mo='<option value="">月</option>'; for(let i=1;i<=12;i++) mo+='<option value="'+i+'">'+i+'</option>'; m.innerHTML=mo;
+                let dd='<option value="">日</option>'; for(let i=1;i<=31;i++) dd+='<option value="'+i+'">'+i+'</option>'; d.innerHTML=dd;
+            });
+        }
+        function getDateStr(p) {
+            const y=document.getElementById(p+'-year').value, m=document.getElementById(p+'-month').value, d=document.getElementById(p+'-day').value;
+            if(!y||!m||!d) return '';
+            return y+'-'+('0'+m).slice(-2)+'-'+('0'+d).slice(-2);
+        }
+        fillBdaySelects();
         function getKanshi(dateStr) {
             const targetDate = new Date(dateStr);
             if (isNaN(targetDate)) return null;
@@ -1943,8 +1988,8 @@ document.addEventListener('click', function(e){
             return { index: kan, name: jukkan[kan] + junishi[shi], stem: jukkan[kan] };
         }
         function checkType() {
-            const me = getKanshi(document.getElementById('my-birthday').value);
-            if (!me) return;
+            const me = getKanshi(getDateStr('my'));
+            if (!me) return alert("あなたの誕生日を、お聞かせください。");
             document.getElementById('res-label').innerText = "My Love Type";
             document.getElementById('res-kanshi').innerText = me.name;
             const types = {
@@ -1963,8 +2008,8 @@ document.addEventListener('click', function(e){
             show();
         }
         function checkAffinity() {
-            const me = getKanshi(document.getElementById('my-birthday').value);
-            const partner = getKanshi(document.getElementById('partner-birthday').value);
+            const me = getKanshi(getDateStr('my'));
+            const partner = getKanshi(getDateStr('partner'));
             if (!me || !partner) return alert("ふたりの誕生日を、お聞かせください。");
             document.getElementById('res-label').innerText = "Affinity Score";
             const mS = me.index; const pS = partner.index;
