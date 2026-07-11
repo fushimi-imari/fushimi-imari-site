@@ -480,6 +480,91 @@ a:hover { opacity: 0.7; }
 }
 
 /* ============================================
+   MONTHLY RHYTHM
+============================================ */
+.monthly {
+  padding: 72px 24px 88px;
+  background: linear-gradient(180deg, #fff 0%, var(--color-cream) 100%);
+}
+.monthly-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.monthly-head {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 36px;
+}
+.monthly-title {
+  font-family: var(--font-jp);
+  font-size: clamp(28px, 3.4vw, 44px);
+  font-weight: 500;
+  color: var(--color-brown);
+  line-height: 1.45;
+  letter-spacing: 0.05em;
+}
+.monthly-lead {
+  font-family: var(--font-jp);
+  font-size: 14px;
+  line-height: 2;
+  color: var(--color-sub);
+}
+.monthly-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.monthly-card {
+  background: #fff;
+  border: 1px solid var(--color-divider);
+  border-radius: 8px;
+  padding: 24px 20px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.monthly-kicker {
+  font-family: var(--font-en);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--color-bordeaux);
+  margin-bottom: 18px;
+}
+.monthly-card h3 {
+  font-family: var(--font-jp);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-brown);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+.monthly-card p {
+  font-family: var(--font-jp);
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--color-sub);
+}
+.monthly-note {
+  margin-top: 22px;
+  font-family: var(--font-en);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--color-bordeaux);
+}
+@media (max-width: 900px) {
+  .monthly { padding: 60px 20px 72px; }
+  .monthly-head { grid-template-columns: 1fr; gap: 20px; }
+  .monthly-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .monthly-grid { grid-template-columns: 1fr; }
+  .monthly-card { min-height: 0; }
+}
+
+/* ============================================
    FEATURED CATEGORIES
 ============================================ */
 .cat-grid {
@@ -1499,6 +1584,7 @@ document.addEventListener('click', function(e){
   </div>
   <nav class="topbar-nav">
     <a href="#top" class="mobile-only">TOP</a>
+    <a href="#monthly">MONTHLY</a>
     <a href="#about">ABOUT</a>
     <a href="#categories">CATEGORIES</a>
     <a href="#beauty-site">BEAUTY</a>
@@ -1511,7 +1597,7 @@ document.addEventListener('click', function(e){
   <div class="hamburger"><span></span><span></span><span></span></div>
 </header>
 
-<!-- ===== HERO — Profile-First ===== -->
+<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-image" aria-label="富士美いまり ポートレート"><img src="images/portrait_hero.jpg" alt="Fushimi Imari" loading="eager"></div>
   <div class="hero-content">
@@ -1520,7 +1606,7 @@ document.addEventListener('click', function(e){
     <p class="hero-name">FUSHIMI IMARI</p>
     <p style="font-family:'Shippori Mincho',serif;font-size:14px;line-height:1.8;color:#5F5E5A;margin:0 0 16px;">揺らぐ肌と身体と心へ<br>たどり着いた答えを ここに</p>
     <div class="hero-cta-group" style="flex-direction:column;gap:10px;align-items:stretch;">
-      <a href="#about" class="btn-primary" style="background:transparent;color:var(--color-brown);border:1px solid var(--color-divider);font-weight:500;">いまりについて 知る</a>
+      <a href="#monthly" class="btn-primary" style="background:transparent;color:var(--color-brown);border:1px solid var(--color-divider);font-weight:500;">今月の整え方を見る</a>
       <a href="#offer" class="btn-primary">LINE限定 5つの贈り物を受け取る →</a>
       <a href="../Fortune/index.html" class="btn-primary" style="background:#fff;color:var(--color-bordeaux);border:1.5px solid var(--color-bordeaux);">気になるあの人との相性を 無料で →</a>
     </div>
@@ -1539,6 +1625,54 @@ document.addEventListener('click', function(e){
     <div class="hero-fans-note">
       <a href="../links/">— 撮影会・イベントはこちら ↗</a>
       <a href="../Men/" style="display:block;margin-top:8px;">— 男性のあなたへ、静かな贈り物 ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MONTHLY RHYTHM ===== -->
+<section class="monthly" id="monthly">
+  <div class="monthly-inner">
+    <div class="monthly-head">
+      <div>
+        <div class="section-eyebrow">MONTHLY RHYTHM</div>
+        <h2 class="monthly-title">今月の整え方</h2>
+        <div class="divider"></div>
+      </div>
+      <p class="monthly-lead">占い、美容、旅先で拾った感覚を少しずつ。がんばるためではなく、毎日を自分の温度に戻すための月替わりメモです。</p>
+    </div>
+    <div class="monthly-grid">
+      <article class="monthly-card">
+        <div>
+          <div class="monthly-kicker">GOOD FLOW</div>
+          <h3>流れのいい干支<br>午・未・卯</h3>
+          <p>焦って前に出るより、整えて待つほど追い風が入りやすい月。予定には余白をひとつ残して。</p>
+        </div>
+        <div class="monthly-note">JULY 2026</div>
+      </article>
+      <article class="monthly-card">
+        <div>
+          <div class="monthly-kicker">POWER FOOD</div>
+          <h3>桃と<br>とうもろこし</h3>
+          <p>暑さで気持ちが前のめりになる日は、甘さと水分を少し。内側からやさしく戻す食材を。</p>
+        </div>
+        <div class="monthly-note">EAT SOFTLY</div>
+      </article>
+      <article class="monthly-card">
+        <div>
+          <div class="monthly-kicker">PLACE</div>
+          <h3>水辺と<br>風のある場所</h3>
+          <p>川沿い、海の近く、緑の多いカフェ。火照った心を、風に預けられる場所へ。</p>
+        </div>
+        <div class="monthly-note">RESET SPOT</div>
+      </article>
+      <article class="monthly-card">
+        <div>
+          <div class="monthly-kicker">LETTER</div>
+          <h3>急がず、<br>戻す。</h3>
+          <p>7月は増やすより、戻す月。旅のあとも、日常の中で少しずつ呼吸を整えていきましょう。</p>
+        </div>
+        <div class="monthly-note">IMARI NOTE</div>
+      </article>
     </div>
   </div>
 </section>
