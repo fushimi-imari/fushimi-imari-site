@@ -848,6 +848,17 @@ body.menu-open { overflow: hidden; }
   position: relative;
   overflow: hidden;
 }
+
+.product-image-mini.kbeauty-photo {
+  background: #F8F4F0;
+}
+.product-image-mini.kbeauty-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .product-image-mini.kbeauty-panel {
   display: flex;
   align-items: center;
@@ -1254,8 +1265,8 @@ document.addEventListener('click', function(e){
   if(!a || typeof gtag!=='function') return;
   var h = a.href || '';
   var txt = (a.innerText||'').trim().slice(0,60);
-  if(/px\.a8\.net|valuecommerce|room\.rakuten|amzn\.|amazon\./.test(h)){
-    var net = /room\.rakuten/.test(h)?'rakuten' : /valuecommerce/.test(h)?'valuecommerce' : /px\.a8\.net/.test(h)?'a8' : (/amazon|amzn/.test(h)?'amazon':'other');
+  if(/px\.a8\.net|valuecommerce|room\.rakuten|qoo10\.jp|amzn\.|amazon\./.test(h)){
+    var net = /room\.rakuten/.test(h)?'rakuten' : /qoo10\.jp/.test(h)?'qoo10' : /valuecommerce/.test(h)?'valuecommerce' : /px\.a8\.net/.test(h)?'a8' : (/amazon|amzn/.test(h)?'amazon':'other');
     gtag('event','affiliate_click',{affiliate_network:net, link_url:h, link_text:txt, page_path:location.pathname});
   } else if(/line\.me|lin\.ee/.test(h)){
     gtag('event','line_register',{link_url:h, page_path:location.pathname});
@@ -1504,10 +1515,8 @@ document.addEventListener('click', function(e){
   <div class="category-scroll">
 
     <article class="product-card-mini">
-      <a href="https://www.qoo10.jp/s/?keyword=medicube+PDRN+Pink+Collagen+Gel+Mask" target="_blank" rel="nofollow noopener">
-        <div class="product-image-mini kbeauty-panel">
-          <div class="kbeauty-panel-inner">medicube<br>PDRN Pink Collagen Gel Mask</div>
-        </div>
+      <a href="https://m.qoo10.jp/su/1468006195/Q207083875" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini kbeauty-photo"><img src="images/kbeauty/medicube-pdrn-pink-collagen-gel-mask.jpg" alt="medicube PDRN Pink Collagen Gel Mask" loading="lazy"></div>
         <div class="product-body-mini">
           <div class="product-meta-mini">
             <span class="product-no-mini">No.01</span>
@@ -1524,9 +1533,7 @@ document.addEventListener('click', function(e){
     </article>
     <article class="product-card-mini">
       <a href="https://www.qoo10.jp/s/?keyword=MEDIHEAL+Madecassoside+Mask" target="_blank" rel="nofollow noopener">
-        <div class="product-image-mini kbeauty-panel">
-          <div class="kbeauty-panel-inner">MEDIHEAL<br>Madecassoside Mask</div>
-        </div>
+        <div class="product-image-mini kbeauty-photo"><img src="images/kbeauty/mediheal-madecassoside-mask.jpg" alt="MEDIHEAL Madecassoside Mask" loading="lazy"></div>
         <div class="product-body-mini">
           <div class="product-meta-mini">
             <span class="product-no-mini">No.02</span>
@@ -1543,9 +1550,7 @@ document.addEventListener('click', function(e){
     </article>
     <article class="product-card-mini">
       <a href="https://www.qoo10.jp/s/?keyword=VT+PDRN+Hydrogel+Mask" target="_blank" rel="nofollow noopener">
-        <div class="product-image-mini kbeauty-panel">
-          <div class="kbeauty-panel-inner">VT<br>PDRN Hydrogel Mask</div>
-        </div>
+        <div class="product-image-mini kbeauty-photo"><img src="images/kbeauty/vt-pdrn-hydrogel-mask.jpg" alt="VT PDRN Hydrogel Mask" loading="lazy"></div>
         <div class="product-body-mini">
           <div class="product-meta-mini">
             <span class="product-no-mini">No.03</span>
@@ -1561,10 +1566,8 @@ document.addEventListener('click', function(e){
       </a>
     </article>
     <article class="product-card-mini">
-      <a href="https://www.qoo10.jp/s/?keyword=ALL+THE+BETTER+Olive+Oil+Lemon" target="_blank" rel="nofollow noopener">
-        <div class="product-image-mini kbeauty-panel">
-          <div class="kbeauty-panel-inner">ALL THE BETTER<br>オリーブオイル＆レモン</div>
-        </div>
+      <a href="https://m.qoo10.jp/su/1468006163/Q207083875" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini kbeauty-photo"><img src="images/kbeauty/all-the-better-olive-oil-lemon.jpg" alt="ALL THE BETTER オリーブオイル＆レモン" loading="lazy"></div>
         <div class="product-body-mini">
           <div class="product-meta-mini">
             <span class="product-no-mini">No.04</span>
@@ -1581,9 +1584,7 @@ document.addEventListener('click', function(e){
     </article>
     <article class="product-card-mini">
       <a href="https://www.qoo10.jp/s/?keyword=NOTHING+BETTER+pumpkin+red+bean+drink" target="_blank" rel="nofollow noopener">
-        <div class="product-image-mini kbeauty-panel">
-          <div class="kbeauty-panel-inner">NOTHING BETTER<br>かぼちゃ＆あずきドリンク</div>
-        </div>
+        <div class="product-image-mini kbeauty-photo"><img src="images/kbeauty/nothing-better-pumpkin-redbean-drink.jpg" alt="NOTHING BETTER かぼちゃ＆あずきドリンク" loading="lazy"></div>
         <div class="product-body-mini">
           <div class="product-meta-mini">
             <span class="product-no-mini">No.05</span>
@@ -1600,9 +1601,7 @@ document.addEventListener('click', function(e){
     </article>
     <article class="product-card-mini">
       <a href="https://www.qoo10.jp/s/?keyword=THOME+PPM+30000+Cream" target="_blank" rel="nofollow noopener">
-        <div class="product-image-mini kbeauty-panel">
-          <div class="kbeauty-panel-inner">THOME<br>PPM 30,000 Cream</div>
-        </div>
+        <div class="product-image-mini kbeauty-photo"><img src="images/kbeauty/thome-ppm-30000-cream.jpg" alt="THOME PPM 30,000 Cream" loading="lazy"></div>
         <div class="product-body-mini">
           <div class="product-meta-mini">
             <span class="product-no-mini">No.06</span>
@@ -1619,9 +1618,7 @@ document.addEventListener('click', function(e){
     </article>
     <article class="product-card-mini">
       <a href="https://www.qoo10.jp/s/?keyword=LIYEVE+GROW+TURN+Exosome+Brush+Ampoule" target="_blank" rel="nofollow noopener">
-        <div class="product-image-mini kbeauty-panel">
-          <div class="kbeauty-panel-inner">LIYEVE<br>GROW:TURN Exosome Brush Ampoule</div>
-        </div>
+        <div class="product-image-mini kbeauty-photo"><img src="images/kbeauty/liyeve-growturn-exosome-brush-ampoule.jpg" alt="LIYEVE GROW:TURN Exosome Brush Ampoule" loading="lazy"></div>
         <div class="product-body-mini">
           <div class="product-meta-mini">
             <span class="product-no-mini">No.07</span>
@@ -1637,10 +1634,8 @@ document.addEventListener('click', function(e){
       </a>
     </article>
     <article class="product-card-mini">
-      <a href="https://www.qoo10.jp/s/?keyword=DAEWON+New+Vein" target="_blank" rel="nofollow noopener">
-        <div class="product-image-mini kbeauty-panel">
-          <div class="kbeauty-panel-inner">DAEWON<br>New Vein</div>
-        </div>
+      <a href="https://m.qoo10.jp/su/1468006115/Q207083875" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini kbeauty-photo"><img src="images/kbeauty/daewon-new-vein.jpg" alt="DAEWON New Vein" loading="lazy"></div>
         <div class="product-body-mini">
           <div class="product-meta-mini">
             <span class="product-no-mini">No.08</span>
