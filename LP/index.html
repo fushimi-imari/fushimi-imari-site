@@ -848,6 +848,50 @@ body.menu-open { overflow: hidden; }
   position: relative;
   overflow: hidden;
 }
+.product-image-mini.kbeauty-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background:
+    linear-gradient(135deg, rgba(253,247,244,0.96), rgba(232,201,192,0.55)),
+    var(--color-cream);
+  background-size: cover;
+}
+.kbeauty-panel-inner {
+  width: 100%;
+  min-height: 132px;
+  border: 1px solid rgba(123,45,63,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  color: var(--color-bordeaux);
+  font-family: var(--serif-en);
+  font-size: 17px;
+  line-height: 1.35;
+  letter-spacing: 0.05em;
+  background: rgba(255,255,255,0.56);
+}
+.kbeauty-visual {
+  max-width: 980px;
+  margin: 0 auto 28px;
+  border: 1px solid var(--color-divider);
+  background: #fff;
+}
+.kbeauty-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.kbeauty-visual figcaption {
+  padding: 14px 18px 16px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--color-brown-light);
+  text-align: center;
+}
 .product-video-mini {
   position: absolute;
   inset: 0;
@@ -1237,6 +1281,10 @@ document.addEventListener('click', function(e){
       COLOR LENS
       <span class="ja-sub">カラコン</span>
     </a>
+    <a href="#cat-kbeauty" onclick="closeMenuOnly()">
+      K-BEAUTY
+      <span class="ja-sub">韓国で見つけた整える美容</span>
+    </a>
     <a href="#cat-skincare" onclick="closeMenuOnly()">
       SKINCARE
       <span class="ja-sub">化粧品</span>
@@ -1354,6 +1402,10 @@ document.addEventListener('click', function(e){
     <span>COLOR LENS</span>
     <span class="ja">瞳の余白</span>
   </a>
+  <a href="#cat-kbeauty">
+    <span>K-BEAUTY</span>
+    <span class="ja">旅で見つけた整える美容</span>
+  </a>
   <a href="#cat-skincare">
     <span>SKINCARE</span>
     <span class="ja">毎日の3STEP</span>
@@ -1434,7 +1486,180 @@ document.addEventListener('click', function(e){
   </div>
 </section>
 
-<!-- ===== CATEGORY 2: SKINCARE / 化粧品 ===== -->
+<!-- ===== CATEGORY 2: K-BEAUTY / 韓国購入品 ===== -->
+<section class="category-section" id="cat-kbeauty">
+  <div class="category-header fade-in">
+    <div class="category-header-left">
+      <h3 class="category-title">K-BEAUTY</h3>
+      <div class="category-subtitle">韓国で本当に使ってよかったものだけ</div>
+    </div>
+    <div class="category-count">— 8 ITEMS</div>
+  </div>
+
+  <figure class="kbeauty-visual fade-in">
+    <img src="images/kbeauty-korea-picks.jpg" alt="韓国で本当に使ってよかったK-BEAUTY購入品まとめ" loading="lazy">
+    <figcaption>旅先で選び、帰国後も手が伸びたもの。肌を整える夜、歩いた日の翌朝、いつものケアに少しだけ足したい韓国美容をまとめました。</figcaption>
+  </figure>
+
+  <div class="category-scroll">
+
+    <article class="product-card-mini">
+      <a href="https://www.qoo10.jp/s/?keyword=medicube+PDRN+Pink+Collagen+Gel+Mask" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini kbeauty-panel">
+          <div class="kbeauty-panel-inner">medicube<br>PDRN Pink Collagen Gel Mask</div>
+        </div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.01</span>
+            <span class="product-pr-mini">韓国購入品</span>
+          </div>
+          <h4 class="product-title-mini">medicube<br>PDRN Pink Collagen Gel Mask</h4>
+          <p class="product-desc-mini">ぷるんと密着するゲルマスク<br>帰国後の夜に、肌をゆっくり整える</p>
+          <div class="product-price-mini">
+            <span>保湿の時間を 長めにとる夜へ</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="product-card-mini">
+      <a href="https://www.qoo10.jp/s/?keyword=MEDIHEAL+Madecassoside+Mask" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini kbeauty-panel">
+          <div class="kbeauty-panel-inner">MEDIHEAL<br>Madecassoside Mask</div>
+        </div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.02</span>
+            <span class="product-pr-mini">韓国購入品</span>
+          </div>
+          <h4 class="product-title-mini">MEDIHEAL<br>Madecassoside Mask</h4>
+          <p class="product-desc-mini">ゆらぎが気になる日の 静かなシートマスク<br>毎日使いにも 手に取りやすい</p>
+          <div class="product-price-mini">
+            <span>肌を静かに包みたい日の一枚</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="product-card-mini">
+      <a href="https://www.qoo10.jp/s/?keyword=VT+PDRN+Hydrogel+Mask" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini kbeauty-panel">
+          <div class="kbeauty-panel-inner">VT<br>PDRN Hydrogel Mask</div>
+        </div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.03</span>
+            <span class="product-pr-mini">韓国購入品</span>
+          </div>
+          <h4 class="product-title-mini">VT<br>PDRN Hydrogel Mask</h4>
+          <p class="product-desc-mini">PDRN配合のハイドロゲルマスク<br>スペシャルケア用に選んだ一枚</p>
+          <div class="product-price-mini">
+            <span>旅のあとに ひと息置くケア</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="product-card-mini">
+      <a href="https://www.qoo10.jp/s/?keyword=ALL+THE+BETTER+Olive+Oil+Lemon" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini kbeauty-panel">
+          <div class="kbeauty-panel-inner">ALL THE BETTER<br>オリーブオイル＆レモン</div>
+        </div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.04</span>
+            <span class="product-pr-mini">韓国購入品</span>
+          </div>
+          <h4 class="product-title-mini">ALL THE BETTER<br>オリーブオイル＆レモン</h4>
+          <p class="product-desc-mini">オリーブオイルとレモンの軽い一杯<br>旅先で見つけた 飲むリズム</p>
+          <div class="product-price-mini">
+            <span>朝の内側ケアを ひとつ</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="product-card-mini">
+      <a href="https://www.qoo10.jp/s/?keyword=NOTHING+BETTER+pumpkin+red+bean+drink" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini kbeauty-panel">
+          <div class="kbeauty-panel-inner">NOTHING BETTER<br>かぼちゃ＆あずきドリンク</div>
+        </div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.05</span>
+            <span class="product-pr-mini">韓国購入品</span>
+          </div>
+          <h4 class="product-title-mini">NOTHING BETTER<br>かぼちゃ＆あずきドリンク</h4>
+          <p class="product-desc-mini">かぼちゃとあずきの やさしいドリンク<br>薄めの味で 飲みやすかったもの</p>
+          <div class="product-price-mini">
+            <span>歩いた日の ひと息に</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="product-card-mini">
+      <a href="https://www.qoo10.jp/s/?keyword=THOME+PPM+30000+Cream" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini kbeauty-panel">
+          <div class="kbeauty-panel-inner">THOME<br>PPM 30,000 Cream</div>
+        </div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.06</span>
+            <span class="product-pr-mini">韓国購入品</span>
+          </div>
+          <h4 class="product-title-mini">THOME<br>PPM 30,000 Cream</h4>
+          <p class="product-desc-mini">守るように重ねる 保湿クリーム<br>肌がゆらぎやすい日の 仕上げに</p>
+          <div class="product-price-mini">
+            <span>乾きやすい夜のふた役</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="product-card-mini">
+      <a href="https://www.qoo10.jp/s/?keyword=LIYEVE+GROW+TURN+Exosome+Brush+Ampoule" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini kbeauty-panel">
+          <div class="kbeauty-panel-inner">LIYEVE<br>GROW:TURN Exosome Brush Ampoule</div>
+        </div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.07</span>
+            <span class="product-pr-mini">韓国購入品</span>
+          </div>
+          <h4 class="product-title-mini">LIYEVE<br>GROW:TURN Exosome Brush Ampoule</h4>
+          <p class="product-desc-mini">ブラシ一体型の 頭皮用アンプル<br>旅先でも使いやすい ひとてま</p>
+          <div class="product-price-mini">
+            <span>髪の根元まで 整える時間</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="product-card-mini">
+      <a href="https://www.qoo10.jp/s/?keyword=DAEWON+New+Vein" target="_blank" rel="nofollow noopener">
+        <div class="product-image-mini kbeauty-panel">
+          <div class="kbeauty-panel-inner">DAEWON<br>New Vein</div>
+        </div>
+        <div class="product-body-mini">
+          <div class="product-meta-mini">
+            <span class="product-no-mini">No.08</span>
+            <span class="product-pr-mini">韓国購入品</span>
+          </div>
+          <h4 class="product-title-mini">DAEWON<br>New Vein</h4>
+          <p class="product-desc-mini">旅のあとに選んだ 内側ケア<br>すっきり過ごしたい日の一本</p>
+          <div class="product-price-mini">
+            <span>歩いた日の 翌朝のために</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== CATEGORY 3: SKINCARE / 化粧品 ===== -->
 <section class="category-section" id="cat-skincare">
   <div class="category-header fade-in">
     <div class="category-header-left">
@@ -1567,7 +1792,7 @@ document.addEventListener('click', function(e){
   </div>
 </section>
 
-<!-- ===== CATEGORY 3: BEAUTY GADGETS / 美容雑貨 ===== -->
+<!-- ===== CATEGORY 4: BEAUTY GADGETS / 美容雑貨 ===== -->
 <section class="category-section" id="cat-gadgets">
   <div class="category-header fade-in">
     <div class="category-header-left">
@@ -1721,7 +1946,7 @@ document.addEventListener('click', function(e){
   </div>
 </section>
 
-<!-- ===== CATEGORY 4: FOR HIM / 男性用ケアアイテム ===== -->
+<!-- ===== CATEGORY 5: FOR HIM / 男性用ケアアイテム ===== -->
 <section class="category-section" id="cat-him">
   <div class="category-header fade-in">
     <div class="category-header-left">
