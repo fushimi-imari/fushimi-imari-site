@@ -1,0 +1,40 @@
+{
+  "links": [
+    {
+      "name": "Official HP",
+      "url": "https://fushimi-imari-site.vercel.app/Official/"
+    },
+    {
+      "name": "Fortune",
+      "url": "https://fushimi-imari-site.vercel.app/Fortune/"
+    },
+    {
+      "name": "IMARI BEAUTY",
+      "url": "https://fushimi-imari-site.vercel.app/LP/"
+    },
+    {
+      "name": "MEN'S EDIT",
+      "url": "https://fushimi-imari-site.vercel.app/Men/"
+    },
+    {
+      "name": "Links",
+      "url": "https://fushimi-imari-site.vercel.app/links/"
+    },
+    {
+      "name": "Rakuten ROOM",
+      "url": "https://room.rakuten.co.jp/fushimi_imari_/items"
+    },
+    {
+      "name": "LINE",
+      "url": "https://line.me/R/ti/p/@485xujjs"
+    },
+    {
+      "name": "Booking",
+      "url": "https://timetr.ee/p/fushimi_imari_rabo"
+    },
+    {
+      "name": "note",
+      "url": "https://note.com/fushimi_imari_"
+    }
+  ]
+}

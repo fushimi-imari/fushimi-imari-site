@@ -480,131 +480,6 @@ a:hover { opacity: 0.7; }
 }
 
 /* ============================================
-   MONTHLY RHYTHM
-============================================ */
-.monthly {
-  padding: 72px 24px 88px;
-  background: linear-gradient(180deg, #fff 0%, var(--color-cream) 100%);
-}
-.monthly-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-}
-.monthly-head {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
-  gap: 48px;
-  align-items: end;
-  margin-bottom: 36px;
-}
-.monthly-title {
-  font-family: var(--font-jp);
-  font-size: clamp(28px, 3.4vw, 44px);
-  font-weight: 500;
-  color: var(--color-brown);
-  line-height: 1.45;
-  letter-spacing: 0.05em;
-}
-.monthly-lead {
-  font-family: var(--font-jp);
-  font-size: 14px;
-  line-height: 2;
-  color: var(--color-sub);
-}
-.monthly-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.monthly-card {
-  background: #fff;
-  border: 1px solid var(--color-divider);
-  border-radius: 8px;
-  padding: 24px;
-  min-height: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 10px 28px rgba(58,45,28,0.07);
-}
-.monthly-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 104px;
-  height: 34px;
-  padding: 0 18px;
-  border-radius: 999px;
-  background: var(--color-beige);
-  font-family: var(--font-jp);
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  color: var(--color-bordeaux);
-  margin-bottom: 42px;
-}
-.monthly-tag.food { background: var(--color-beige-deep); }
-.monthly-tag.spot {
-  background: var(--color-bordeaux);
-  color: #fff;
-}
-.monthly-tag.word {
-  background: var(--color-brown);
-  color: #fff;
-}
-.monthly-kicker,
-.monthly-note {
-  font-family: var(--font-en);
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  color: var(--color-bordeaux);
-}
-.monthly-card h3 {
-  font-family: var(--font-jp);
-  font-size: clamp(32px, 2.6vw, 42px);
-  font-weight: 500;
-  color: var(--color-brown);
-  line-height: 1.22;
-  letter-spacing: 0.03em;
-  margin-bottom: 22px;
-}
-.monthly-card p {
-  font-family: var(--font-jp);
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--color-sub);
-}
-.monthly-note {
-  display: block;
-  margin-top: 24px;
-  padding-top: 18px;
-  border-top: 1px solid var(--color-divider);
-}
-@media (max-width: 900px) {
-  .monthly { padding: 60px 20px 72px; }
-  .monthly-head { grid-template-columns: 1fr; gap: 20px; }
-  .monthly-grid {
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(260px, 78vw);
-    grid-template-columns: none;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 20px 14px;
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-  .monthly-card {
-    scroll-snap-align: start;
-    min-width: 0;
-  }
-}
-@media (max-width: 600px) {
-  .monthly-grid { grid-auto-columns: minmax(260px, 82vw); }
-  .monthly-card { min-height: 0; }
-}
-
-/* ============================================
    FEATURED CATEGORIES
 ============================================ */
 .cat-grid {
@@ -1650,7 +1525,6 @@ document.addEventListener('click', function(e){
   </div>
   <nav class="topbar-nav">
     <a href="#top" class="mobile-only">TOP</a>
-    <a href="#monthly">MONTHLY</a>
     <a href="#about">ABOUT</a>
     <a href="#categories">CATEGORIES</a>
     <a href="#beauty-site">BEAUTY</a>
@@ -1672,7 +1546,6 @@ document.addEventListener('click', function(e){
     <p class="hero-name">FUSHIMI IMARI</p>
     <p style="font-family:'Shippori Mincho',serif;font-size:14px;line-height:1.8;color:#5F5E5A;margin:0 0 16px;">揺らぐ肌と身体と心へ<br>たどり着いた答えを ここに</p>
     <div class="hero-cta-group" style="flex-direction:column;gap:10px;align-items:stretch;">
-      <a href="#monthly" class="btn-primary" style="background:transparent;color:var(--color-brown);border:1px solid var(--color-divider);font-weight:500;">今月の整え方を見る</a>
       <a href="#offer" class="btn-primary">LINE限定 5つの贈り物を受け取る →</a>
       <a href="../Fortune/index.html" class="btn-primary" style="background:#fff;color:var(--color-bordeaux);border:1.5px solid var(--color-bordeaux);">気になるあの人との相性を 無料で →</a>
     </div>
@@ -1691,54 +1564,6 @@ document.addEventListener('click', function(e){
     <div class="hero-fans-note">
       <a href="../links/index.html">— 撮影会・イベントはこちら ↗</a>
       <a href="../Men/" style="display:block;margin-top:8px;">— 男性のあなたへ、静かな贈り物 ↗</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MONTHLY RHYTHM ===== -->
-<section class="monthly" id="monthly">
-  <div class="monthly-inner">
-    <div class="monthly-head">
-      <div>
-        <div class="section-eyebrow">MONTHLY RHYTHM</div>
-        <h2 class="monthly-title">今月の整え方</h2>
-        <div class="divider"></div>
-      </div>
-      <p class="monthly-lead">今月のおすすめ</p>
-    </div>
-    <div class="monthly-grid">
-      <article class="monthly-card">
-        <div>
-          <div class="monthly-tag">干支</div>
-          <h3>午・未・卯</h3>
-          <p>余白を意識するといい流れが入る月</p>
-        </div>
-        <div class="monthly-note">LUCKY ZODIAC</div>
-      </article>
-      <article class="monthly-card">
-        <div>
-          <div class="monthly-tag food">食べ物</div>
-          <h3>桃・<br>とうもろこし</h3>
-          <p>甘みとうるおいを取り入れ内側から整える</p>
-        </div>
-        <div class="monthly-note">LUCKY FOOD</div>
-      </article>
-      <article class="monthly-card">
-        <div>
-          <div class="monthly-tag spot">場所</div>
-          <h3>海・森林</h3>
-          <p>そよ風が心地いい場所で熱を逃がして</p>
-        </div>
-        <div class="monthly-note">LUCKY SPOT</div>
-      </article>
-      <article class="monthly-card">
-        <div>
-          <div class="monthly-tag word">言葉</div>
-          <h3>急がず<br>見直す</h3>
-          <p>増やすより今あるものを大切に</p>
-        </div>
-        <div class="monthly-note">LUCKY WORD</div>
-      </article>
     </div>
   </div>
 </section>
